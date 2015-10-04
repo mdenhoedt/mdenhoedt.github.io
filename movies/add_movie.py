@@ -15,12 +15,18 @@ def get_html_movie(imdb_code):
     link = imdb + imdb_code
     html = get_html_imdb(link)
     title = get_title(html)
-    return '<a href="' + link + '" class="btn btn-default">' + title + '</a> '
+    out = '<a href="' + link + '" class="btn btn-default">' + title + '</a> '
+    return (out, title)
 
 def main():
     imdb_code = raw_input('enter imdb code: ')
-    link = get_html_movie(imdb_code.strip())
+    (link, title) = get_html_movie(imdb_code.strip())
+    with open('movies.txt', 'r') as file:
+        if link in file.read():
+            print '"' + title + '" already in list'
+            return
     with open('movies.txt', 'a') as file:
         file.write(link + '\n')
+    print 'succesfully added "' + title + '"'
 
 main()
