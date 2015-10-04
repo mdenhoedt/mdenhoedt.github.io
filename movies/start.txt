@@ -51,5 +51,3 @@
 
     <div class="starter-template">
         <h1>Movies</h1>
-        <p class="lead">The movies I have seen are listed on this page.</p>
-        <p class="movies">
