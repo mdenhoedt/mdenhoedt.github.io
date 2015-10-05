@@ -136,3 +136,16 @@
 <a href="http://www.imdb.com/title/tt0887912" class="btn btn-default">The Hurt Locker (2008)</a> 
 <a href="http://www.imdb.com/title/tt0056172" class="btn btn-default">Lawrence of Arabia (1962)</a> 
 <a href="http://www.imdb.com/title/tt0265086" class="btn btn-default">Black Hawk Down (2001)</a> 
+<a href="http://www.imdb.com/title/tt3203616" class="btn btn-default">The Cobbler (2014)</a> 
+<a href="http://www.imdb.com/title/tt1109624" class="btn btn-default">Paddington (2014)</a> 
+<a href="http://www.imdb.com/title/tt2024469" class="btn btn-default">Non-Stop (2014)</a> 
+<a href="http://www.imdb.com/title/tt1956620" class="btn btn-default">Sex Tape (2014)</a> 
+<a href="http://www.imdb.com/title/tt1905041" class="btn btn-default">Furious 6 (2013)</a> 
+<a href="http://www.imdb.com/title/tt2333784" class="btn btn-default">The Expendables 3 (2014)</a> 
+<a href="http://www.imdb.com/title/tt2140619" class="btn btn-default">Two Night Stand (2014)</a> 
+<a href="http://www.imdb.com/title/tt3007512" class="btn btn-default">The Water Diviner (2014)</a> 
+<a href="http://www.imdb.com/title/tt2614684" class="btn btn-default">'71 (2014)</a> 
+<a href="http://www.imdb.com/title/tt0264464" class="btn btn-default">Catch Me If You Can (2002)</a> 
+<a href="http://www.imdb.com/title/tt1119646" class="btn btn-default">The Hangover (2009)</a> 
+<a href="http://www.imdb.com/title/tt2994190" class="btn btn-default">Camp X-Ray (2014)</a> 
+<a href="http://www.imdb.com/title/tt1205537" class="btn btn-default">Jack Ryan: Shadow Recruit (2014)</a> 
