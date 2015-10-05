@@ -130,3 +130,9 @@
 <a href="http://www.imdb.com/title/tt1706620" class="btn btn-default">Snowpiercer (2013)</a> 
 <a href="http://www.imdb.com/title/tt2039393" class="btn btn-default">The Gambler (2014)</a> 
 <a href="http://www.imdb.com/title/tt0988045" class="btn btn-default">Sherlock Holmes (2009)</a> 
+<a href="http://www.imdb.com/title/tt0480249" class="btn btn-default">I Am Legend (2007)</a> 
+<a href="http://www.imdb.com/title/tt0343818" class="btn btn-default">I, Robot (2004)</a> 
+<a href="http://www.imdb.com/title/tt1409024" class="btn btn-default">Men in Black 3 (2012)</a> 
+<a href="http://www.imdb.com/title/tt0887912" class="btn btn-default">The Hurt Locker (2008)</a> 
+<a href="http://www.imdb.com/title/tt0056172" class="btn btn-default">Lawrence of Arabia (1962)</a> 
+<a href="http://www.imdb.com/title/tt0265086" class="btn btn-default">Black Hawk Down (2001)</a> 
