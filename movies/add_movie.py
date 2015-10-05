@@ -1,4 +1,4 @@
-import urllib2, sys
+import urllib2, sys, cgi
 from bs4 import BeautifulSoup
 
 imdb = 'http://www.imdb.com/title/'
@@ -15,7 +15,8 @@ def get_html_movie(imdb_code):
     link = imdb + imdb_code
     html = get_html_imdb(link)
     title = get_title(html)
-    out = '<a href="' + link + '" class="btn btn-default">' + title + '</a> '
+    t_html = cgi.escape(title).encode('ascii', 'xmlcharrefreplace')
+    out = '<a href="' + link + '" class="btn btn-default">' + t_html + '</a> '
     return (out, title)
 
 def main():
