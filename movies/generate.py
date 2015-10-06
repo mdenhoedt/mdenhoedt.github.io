@@ -14,7 +14,7 @@ def main():
         file.write('<p class="lead">The ' + str(nr_of_movies) + ' ')
         file.write('movies I have seen are listed on this page.</p>\n')
         file.write(search_form)
-        file.write('<p class="movies">\n')
+        file.write('<p class="movies" id="movies-list">\n')
         file.write(movies)
         file.write(end)
 
