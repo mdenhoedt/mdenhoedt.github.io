@@ -13,9 +13,9 @@
         </li>
         <li><form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-                <input type="text" id="search-input" class="form-control" placeholder="Search">
+                <input type="text" id="search-input" oninput="movies_search()" class="form-control" placeholder="Search">
             </div>
-            <a class="btn btn-default" onclick="movies_search()">Submit</a>
+            <a class="btn btn-default" onclick="movies_search()">Search</a>
         </form></li>
     </u>
 </nav>
