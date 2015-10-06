@@ -5,6 +5,13 @@ body {
     padding: 40px 15px;
 }
 
-p.movies{
+p.movies {
     line-height: 250%;
+    margin-top: 20px;
 }
+
+.left-button {
+    margin-left:10px;
+}
+
+
