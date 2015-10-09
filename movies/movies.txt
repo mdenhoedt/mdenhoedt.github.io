@@ -163,3 +163,6 @@
 <a href="http://www.imdb.com/title/tt0118607" class="btn btn-default">Amistad (1997)</a> 
 <a href="http://www.imdb.com/title/tt0395699" class="btn btn-default">The Pacifier (2005)</a> 
 <a href="http://www.imdb.com/title/tt3849692" class="btn btn-default">Operator (2015)</a> 
+<a href="http://www.imdb.com/title/tt1285016" class="btn btn-default">The Social Network (2010)</a> 
+<a href="http://www.imdb.com/title/tt0421715" class="btn btn-default">The Curious Case of Benjamin Button (2008)</a> 
+<a href="http://www.imdb.com/title/tt0944835" class="btn btn-default">Salt (2010)</a> 
