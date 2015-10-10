@@ -22,13 +22,12 @@ function movies_search() {
         }
     } else {
         for (var i = 0; i < movie_array.length; ++i) {
-            if (movie_array[i].length == 0) {
+            str = movie_array[i].match(/>.+</);
+            if (str == null) {
                 continue;
             }
-            str = movie_array[i].match(/>.+</)[0];
-            str = str.substring(1, str.length - 1);
-            console.log(str);
-            if (str.search(input) > 0) {
+            str = str[0].substring(1, str[0].length - 1);
+            if (str.search(input) >= 0) {
                 output += movie_array[i] + "\n";
             } 
         }
