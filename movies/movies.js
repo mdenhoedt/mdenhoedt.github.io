@@ -1,5 +1,7 @@
 var movie_array;
 var sort_year, sort_title;
+var toggle_year = false;
+var toggle_title = false;
 
 function set_up() {
     temp = document.getElementById("movies-list").innerHTML;
@@ -20,8 +22,14 @@ function movies_sort_year() {
     movie_array.sort(function(a, b) {
         year_a = extract_year(a);
         year_b = extract_year(b);
-        return year_a - year_b;
+        if (toggle_year) {
+            return year_a - year_b;
+        } else {
+            return year_b - year_a;
+        }
     });
+    toggle_year = !toggle_year;
+    toggle_title = false;
     output = movie_array.join("\n");
     document.getElementById("movies-list").innerHTML = output;
 }
@@ -30,8 +38,16 @@ function movies_sort_title() {
     sort_year.className = "blank glyphicon glyphicon-ok";
     sort_title.className = "glyphicon glyphicon-ok";
     movie_array.sort(function compareYear(a, b) {
-        return Math.random() * 100 % 10;
+        str_a = a.match(/>.+</);
+        str_b = b.match(/>.+</);
+        if (toggle_title) {
+            return str_a < str_b;
+        } else {
+            return str_a > str_b;
+        }
     });
+    toggle_title = !toggle_title;
+    toggle_year = false;
     output = movie_array.join("\n");
     document.getElementById("movies-list").innerHTML = output;
 }
