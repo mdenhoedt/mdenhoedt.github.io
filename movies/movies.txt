@@ -196,3 +196,4 @@
 <a href="http://www.imdb.com/title/tt2120120" class="btn btn-default">Pixels (2015)</a> 
 <a href="http://www.imdb.com/title/tt0465494" class="btn btn-default">Hitman (2007)</a> 
 <a href="http://www.imdb.com/title/tt1798684" class="btn btn-default">Southpaw (2015)</a> 
+<a href="http://www.imdb.com/title/tt1674771" class="btn btn-default">Entourage (2015)</a> 
