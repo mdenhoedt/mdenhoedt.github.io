@@ -197,3 +197,5 @@
 <a href="http://www.imdb.com/title/tt0465494" class="btn btn-default">Hitman (2007)</a> 
 <a href="http://www.imdb.com/title/tt1798684" class="btn btn-default">Southpaw (2015)</a> 
 <a href="http://www.imdb.com/title/tt1674771" class="btn btn-default">Entourage (2015)</a> 
+<a href="http://www.imdb.com/title/tt1656190" class="btn btn-default">Safe (2012)</a> 
+<a href="http://www.imdb.com/title/tt1904996" class="btn btn-default">Parker (2013)</a> 

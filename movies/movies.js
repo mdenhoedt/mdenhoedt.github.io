@@ -8,6 +8,7 @@ function set_up() {
     movie_array = temp.trim().split("\n");
     sort_year = document.getElementById("year-sort");
     sort_title = document.getElementById("title-sort");
+    movies_sort_year();
 }
 
 function extract_year(str) {
