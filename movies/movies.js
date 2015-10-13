@@ -54,7 +54,7 @@ function movies_sort_title() {
 }
 
 function movies_search() {
-    input = document.getElementById("search-input").value;
+    input = document.getElementById("search-input").value.toLowerCase();
     output = "";
     if (input == "") {
         for (var i = 0; i < movie_array.length; ++i) {
@@ -66,7 +66,7 @@ function movies_search() {
             if (str == null) {
                 continue;
             }
-            str = str[0].substring(1, str[0].length - 1);
+            str = str[0].substring(1, str[0].length - 1).toLowerCase();
             if (str.search(input) >= 0) {
                 output += movie_array[i] + "\n";
             } 
