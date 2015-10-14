@@ -201,3 +201,10 @@
 <a href="http://www.imdb.com/title/tt1904996" class="btn btn-default">Parker (2013)</a> 
 <a href="http://www.imdb.com/title/tt0363163" class="btn btn-default">Der Untergang (2004)</a> 
 <a href="http://www.imdb.com/title/tt1645089" class="btn btn-default">Inside Job (2010)</a> 
+<a href="http://www.imdb.com/title/tt1298650" class="btn btn-default">Pirates of the Caribbean: On Stranger Tides (2011)</a> 
+<a href="http://www.imdb.com/title/tt0449088" class="btn btn-default">Pirates of the Caribbean: At World's End (2007)</a> 
+<a href="http://www.imdb.com/title/tt0325980" class="btn btn-default">Pirates of the Caribbean: The Curse of the Black Pearl (2003)</a> 
+<a href="http://www.imdb.com/title/tt0808151" class="btn btn-default">Angels &amp; Demons (2009)</a> 
+<a href="http://www.imdb.com/title/tt1229238" class="btn btn-default">Mission: Impossible - Ghost Protocol (2011)</a> 
+<a href="http://www.imdb.com/title/tt0274166" class="btn btn-default">Johnny English (2003)</a> 
+<a href="http://www.imdb.com/title/tt1634122" class="btn btn-default">Johnny English Reborn (2011)</a> 
