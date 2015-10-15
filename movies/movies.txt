@@ -212,3 +212,6 @@
 <a href="http://www.imdb.com/title/tt0458339" class="btn btn-default">Captain America: The First Avenger (2011)</a> 
 <a href="http://www.imdb.com/title/tt2224026" class="btn btn-default">Home (2015)</a> 
 <a href="http://www.imdb.com/title/tt2848292" class="btn btn-default">Pitch Perfect 2 (2015)</a> 
+<a href="http://www.imdb.com/title/tt3622592" class="btn btn-default">Paper Towns (2015)</a> 
+<a href="http://www.imdb.com/title/tt1957938" class="btn btn-default">Narcopolis (2015)</a> 
+<a href="http://www.imdb.com/title/tt2209764" class="btn btn-default">Transcendence (2014)</a> 
