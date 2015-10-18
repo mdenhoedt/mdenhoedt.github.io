@@ -23,6 +23,11 @@ function movies_sort_year() {
     movie_array.sort(function(a, b) {
         year_a = extract_year(a);
         year_b = extract_year(b);
+        if (year_a == year_b) {
+            str_a = a.match(/>.+</);
+            str_b = b.match(/>.+</);
+            return str_a > str_b;
+        }
         if (toggle_year) {
             return year_a - year_b;
         } else {
