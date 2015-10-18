@@ -65,7 +65,9 @@ function movies_search() {
         for (var i = 0; i < movie_array.length; ++i) {
             output += movie_array[i] + "\n";
         }
+        document.getElementById("search-results").innerHTML = "";
     } else {
+        found = 0;
         for (var i = 0; i < movie_array.length; ++i) {
             str = movie_array[i].match(/>.+</);
             if (str == null) {
@@ -74,8 +76,10 @@ function movies_search() {
             str = str[0].substring(1, str[0].length - 1).toLowerCase();
             if (str.search(input) >= 0) {
                 output += movie_array[i] + "\n";
+                found++;
             } 
         }
+        document.getElementById("search-results").innerHTML = found + " results";
     }
     document.getElementById("movies-list").innerHTML = output;
 }
