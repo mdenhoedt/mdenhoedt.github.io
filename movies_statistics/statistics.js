@@ -1,3 +1,15 @@
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+            ['Movie', 'Rating']
+            ,['Saving Private Ryan (1998)', 8.6]
+            ,['Edge of Tomorrow (2014)', 7.9]
+            ,['The Shawshank Redemption (1994)', 9.3]
+            ,['Office Space (1999)', 7.8]
+            ,['The Boy in the Striped Pyjamas (2008)', 7.8]
+            ,['Pearl Harbor (2001)', 6.0]
+            ,['V for Vendetta (2005)', 8.2]
             ,['Wild Card (2015)', 5.6]
             ,['Valkyrie (2008)', 7.1]
             ,['The Signal (2014)', 6.1]
@@ -23,7 +35,7 @@
             ,['Mission: Impossible - Ghost Protocol (2011)', 7.4]
             ,['Angels & Demons (2009)', 6.7]
             ,['Pirates of the Caribbean: The Curse of the Black Pearl (2003)', 8.1]
-            ,['Pirates of the Caribbean: At World's End (2007)', 7.1]
+            ,['Pirates of the Caribbean: At World\'s End (2007)', 7.1]
             ,['Pirates of the Caribbean: On Stranger Tides (2011)', 6.7]
             ,['Inside Job (2010)', 8.3]
             ,['Der Untergang (2004)', 8.3]
@@ -48,7 +60,7 @@
             ,['Harry Potter and the Prisoner of Azkaban (2004)', 7.8]
             ,['Harry Potter and the Chamber of Secrets (2002)', 7.4]
             ,['Selma (2014)', 7.5]
-            ,['Let's Be Cops (2014)', 6.5]
+            ,['Let\'s Be Cops (2014)', 6.5]
             ,['Pitch Perfect (2012)', 7.2]
             ,['Child 44 (2015)', 6.4]
             ,['Transformers: Age of Extinction (2014)', 5.8]
@@ -81,7 +93,7 @@
             ,['Camp X-Ray (2014)', 7.0]
             ,['The Hangover (2009)', 7.8]
             ,['Catch Me If You Can (2002)', 8.0]
-            ,[''71 (2014)', 7.2]
+            ,['\'71 (2014)', 7.2]
             ,['The Water Diviner (2014)', 7.1]
             ,['Two Night Stand (2014)', 6.4]
             ,['The Expendables 3 (2014)', 6.1]
@@ -112,3 +124,14 @@
             ,['Haywire (2011)', 5.8]
             ,['Sherlock Holmes: A Game of Shadows (2011)', 7.5]
             ,['Taken 2 (2012)', 6.3]
+                        ]);
+    var options = {
+        title:        'Rating of movies',
+        legend:       {position: 'none' },
+        height:       500,
+        histogram:    {hideBucketItems: true, bucketSize: 0.5},
+    };
+
+    var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}
