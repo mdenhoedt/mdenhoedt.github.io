@@ -238,10 +238,13 @@ function drawChart() {
             ,["Wild Card (2015)", 5.6]
                         ]);
     var options = {
-        title:        'Rating of movies',
-        legend:       {position: 'none' },
-        height:       500,
-        histogram:    {hideBucketItems: true, bucketSize: 0.5},
+        title:          'Rating of movies',
+        legend:         {position: 'none' },
+        height:         500,
+        chartArea:      {width: '100%'},
+        hAxis:          {title: '', textPosition: 'out'},
+        vAxis:          {title: '', textPosition: 'in'},
+        histogram:      {hideBucketItems: true, bucketSize: 0.5},
     };
 
     var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
