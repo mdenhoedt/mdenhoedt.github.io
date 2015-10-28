@@ -6,18 +6,19 @@ imdb = 'http://www.imdb.com/title/'
 def get_html_imdb(url):
     return urllib2.urlopen(url).read().strip()
 
-def get_title(html):
+def get_info(html):
     soup = BeautifulSoup(html, 'html.parser')
     title = soup.title.string
-    return title.replace(' - IMDb', '')
+    rating = soup.find('div', {'class': 'titlePageSprite star-box-giga-star'})
+    rate = str(rating.text).strip()
+    return (title.replace(' - IMDb', ''), rate)
 
 def get_html_movie(imdb_code):
     link = imdb + imdb_code
     html = get_html_imdb(link)
-    title = get_title(html)
-    rating = 1.1
+    (title, rating) = get_info(html)
     t_html = cgi.escape(title).encode('ascii', 'xmlcharrefreplace')
-    out = '<a href="' + link + '" rating="' + rating + \
+    out = '<a href="' + link + '" title="rating: ' + rating + \
             '" class="btn btn-default">' + t_html + '</a> '
     return (out, title, rating)
 
@@ -25,11 +26,11 @@ def add_to_statistics(title, rating):
     file_name = '../movies_statistics/statistics.js'
     with open(file_name, 'r') as file:
         contents = file.readlines()
-    line = ",['" + title + "', '" + rating + "']\n"
+    line = "            ,['" + title + "', " + rating + "]\n"
     contents.insert(5, line)
     with open(file_name, 'w') as file:
         output = "".join(contents)
-        file.write(contents)
+        file.write(output)
 
 def main():
     imdb_code = raw_input('enter imdb code: ')
