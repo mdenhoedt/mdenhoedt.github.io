@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../favicon.ico">
+
+<title>Movies</title>
+
+<!-- Bootstrap core CSS -->
+<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="../style.css" rel="stylesheet">
+
+<script src="../bootstrap/ie-emulation-modes-warning.js"></script>
+<script src="movies.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body onload="set_up()">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">mdenhoedt</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="../">Home</a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Movies <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../movies">Movies List</a></li>
+                        <li><a href="">To-do Movie List</a></li>
+                        <li><a href="../movies_statistics">Statistics</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>To-do Movies</h1>
+<p class="lead">The 41 movies I want to watch are listed on this page.</p>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort On <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a onclick="movies_sort_title()"><span id="title-sort" class="glyphicon glyphicon-ok" aria-hidden="true"></span> Title</a></li>
+            <li><a onclick="movies_sort_year()"><span id="year-sort" class="blank glyphicon glyphicon-ok" aria-hidden="true"></span> Year</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" id="search-input" oninput="movies_search()" class="form-control" placeholder="Search">
+        </div>
+        <button onclick="movies_search()" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="search-results"></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<p class="movies" id="movies-list">
+<a href="http://www.imdb.com/title/tt3859076" title="rating: 6.2" class="btn btn-default">Truth (2015)</a>
+<a href="http://www.imdb.com/title/tt3321300" title="rating: 6.3" class="btn btn-default">Spooks: The Greater Good (2015)</a>
+<a href="http://www.imdb.com/title/tt3569230" title="rating: 7.3" class="btn btn-default">Legend (2015)</a>
+<a href="http://www.imdb.com/title/tt1895587" title="rating: 8.5" class="btn btn-default">Spotlight (2015)</a>
+<a href="http://www.imdb.com/title/tt2361509" title="rating: 7.3" class="btn btn-default">The Intern (2015)</a>
+<a href="http://www.imdb.com/title/tt3659388" title="rating: 8.2" class="btn btn-default">The Martian (2015)</a>
+<a href="http://www.imdb.com/title/tt3460252" title="rating: 8.3" class="btn btn-default">The Hateful Eight (2015)</a>
+<a href="http://www.imdb.com/title/tt4498460" title="rating: 6.7" class="btn btn-default">Tom Swift and His Electric Rifle (2015)</a>
+<a href="http://www.imdb.com/title/tt1596345" title="rating: 7.1" class="btn btn-default">Pawn Sacrifice (2014)</a>
+<a href="http://www.imdb.com/title/tt3268668" title="rating: 5.8" class="btn btn-default">Captive (2015)</a>
+<a href="http://www.imdb.com/title/tt1596363" title="rating: 8.3" class="btn btn-default">The Big Short (2015)</a>
+<a href="http://www.imdb.com/title/tt1355683" title="rating: 7.1" class="btn btn-default">Black Mass (2015)</a>
+<a href="http://www.imdb.com/title/tt2719848" title="rating: 7.2" class="btn btn-default">Everest (2015)</a>
+<a href="http://www.imdb.com/title/tt2515030" title="rating: 6.6" class="btn btn-default">Escobar: Paradise Lost (2014)</a>
+<a href="http://www.imdb.com/title/tt0068646" title="rating: 9.2" class="btn btn-default">The Godfather (1972)</a>
+<a href="http://www.imdb.com/title/tt0071562" title="rating: 9.0" class="btn btn-default">The Godfather: Part II (1974)</a>
+<a href="http://www.imdb.com/title/tt0099674" title="rating: 7.6" class="btn btn-default">The Godfather: Part III (1990)</a>
+<a href="http://www.imdb.com/title/tt1951266" title="rating: 7.0" class="btn btn-default">The Hunger Games: Mockingjay - Part 2 (2015)</a>
+<a href="http://www.imdb.com/title/tt1431045" title="rating: -" class="btn btn-default">Deadpool (2016)</a>
+<a href="http://www.imdb.com/title/tt2278388" title="rating: 8.1" class="btn btn-default">The Grand Budapest Hotel (2014)</a>
+<a href="http://www.imdb.com/title/tt1663202" title="rating: 8.3" class="btn btn-default">The Revenant (2015)</a>
+<a href="http://www.imdb.com/title/tt0120586" title="rating: 8.6" class="btn btn-default">American History X (1998)</a>
+<a href="http://www.imdb.com/title/tt0114369" title="rating: 8.6" class="btn btn-default">Se7en (1995)</a>
+<a href="http://www.imdb.com/title/tt0114814" title="rating: 8.6" class="btn btn-default">The Usual Suspects (1995)</a>
+<a href="http://www.imdb.com/title/tt0317248" title="rating: 8.7" class="btn btn-default">City of God (2002)</a>
+<a href="http://www.imdb.com/title/tt0062622" title="rating: 8.3" class="btn btn-default">2001: A Space Odyssey (1968)</a>
+<a href="http://www.imdb.com/title/tt0086250" title="rating: 8.3" class="btn btn-default">Scarface (1983)</a>
+<a href="http://www.imdb.com/title/tt0075314" title="rating: 8.4" class="btn btn-default">Taxi Driver (1976)</a>
+<a href="http://www.imdb.com/title/tt0113277" title="rating: 8.3" class="btn btn-default">Heat (1995)</a>
+<a href="http://www.imdb.com/title/tt0169547" title="rating: 8.4" class="btn btn-default">American Beauty (1999)</a>
+<a href="http://www.imdb.com/title/tt0081505" title="rating: 8.4" class="btn btn-default">The Shining (1980)</a>
+<a href="http://www.imdb.com/title/tt0180093" title="rating: 8.4" class="btn btn-default">Requiem for a Dream (2000)</a>
+<a href="http://www.imdb.com/title/tt0119488" title="rating: 8.3" class="btn btn-default">L.A. Confidential (1997)</a>
+<a href="http://www.imdb.com/title/tt0071853" title="rating: 8.3" class="btn btn-default">Monty Python and the Holy Grail (1975)</a>
+<a href="http://www.imdb.com/title/tt0078748" title="rating: 8.5" class="btn btn-default">Alien (1979)</a>
+<a href="http://www.imdb.com/title/tt0209144" title="rating: 8.5" class="btn btn-default">Memento (2000)</a>
+<a href="http://www.imdb.com/title/tt0485947" title="rating: 7.9" class="btn btn-default">Mr. Nobody (2009)</a>
+<a href="http://www.imdb.com/title/tt2304933" title="rating: 5.6" class="btn btn-default">The 5th Wave (2016)</a>
+<a href="http://www.imdb.com/title/tt1860213" title="rating: 6.1" class="btn btn-default">Dirty Grandpa (2016)</a>
+<a href="http://www.imdb.com/title/tt5320892" title="rating: 7.6" class="btn btn-default">Buurman &amp; Buurman - Al 40 jaar beste vrienden! (2016)</a>
+<a href="http://www.imdb.com/title/tt4172430" title="rating: 7.6" class="btn btn-default">13 Hours: The Secret Soldiers of Benghazi (2016)</a>
+</p></div>
+
+</div><!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+

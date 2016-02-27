@@ -5,6 +5,19 @@ body {
     padding: 40px 15px;
 }
 
-p.movies{
+.nopadding {
+    padding: 2px;
+}
+
+p.movies {
     line-height: 250%;
+    margin-top: 20px;
+}
+
+.left-button {
+    margin-left:-25px;
+}
+
+.blank {
+    color: white;
 }
