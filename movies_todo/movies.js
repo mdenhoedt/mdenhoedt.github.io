@@ -1,13 +1,15 @@
 var movie_array;
-var sort_year, sort_title;
+var sort_year, sort_title, sort_rating;
 var toggle_year = false;
 var toggle_title = false;
+var toggle_rating = false;
 
 function set_up() {
     temp = document.getElementById("movies-list").innerHTML;
     movie_array = temp.trim().split("\n");
     sort_year = document.getElementById("year-sort");
     sort_title = document.getElementById("title-sort");
+    sort_rating = document.getElementById("rating-sort");
     movies_sort_year();
 }
 
@@ -17,9 +19,47 @@ function extract_year(str) {
     return parseInt(year);
 }
 
+function extract_rating(str) {
+    rating = str.match(/\"rating:\s\d+\.\d+\"/g)[0];
+    rating = rating.match(/\d+\.\d+/g)[0];
+    return parseFloat(rating);
+}
+
+function movies_sort_rating() {
+    sort_year.className = "blank glyphicon glyphicon-ok";
+    sort_title.className = "blank glyphicon glyphicon-ok";
+    sort_rating.className = "glyphicon glyphicon-ok";
+    toggle_year = false;
+    toggle_title = false;
+    toggle_rating = !toggle_rating;
+
+    movie_array.sort(function(a, b) {
+        rating_a = extract_rating(a);
+        rating_b = extract_rating(b);
+        year_a = extract_year(a);
+        year_b = extract_year(b);
+        if (rating_a == rating_b) {
+            return year_b - year_a;
+        }
+        if (toggle_rating) {
+            return rating_b - rating_a;
+        } else {
+            return rating_a - rating_b;
+        }
+    });
+
+    output = movie_array.join("\n");
+    document.getElementById("movies-list").innerHTML = output;
+}
+
 function movies_sort_year() {
     sort_year.className = "glyphicon glyphicon-ok";
     sort_title.className = "blank glyphicon glyphicon-ok";
+    sort_rating.className = "blank glyphicon glyphicon-ok";
+    toggle_year = !toggle_year;
+    toggle_title = false;
+    toggle_rating = false;
+
     movie_array.sort(function(a, b) {
         year_a = extract_year(a);
         year_b = extract_year(b);
@@ -34,8 +74,6 @@ function movies_sort_year() {
             return year_b - year_a;
         }
     });
-    toggle_year = !toggle_year;
-    toggle_title = false;
     output = movie_array.join("\n");
     document.getElementById("movies-list").innerHTML = output;
 }
@@ -43,6 +81,11 @@ function movies_sort_year() {
 function movies_sort_title() {
     sort_year.className = "blank glyphicon glyphicon-ok";
     sort_title.className = "glyphicon glyphicon-ok";
+    sort_rating.className = "blank glyphicon glyphicon-ok";
+    toggle_title = !toggle_title;
+    toggle_year = false;
+    toggle_rating = false;
+
     movie_array.sort(function compareYear(a, b) {
         str_a = a.match(/>.+</);
         str_b = b.match(/>.+</);
@@ -52,8 +95,6 @@ function movies_sort_title() {
             return str_a > str_b;
         }
     });
-    toggle_title = !toggle_title;
-    toggle_year = false;
     output = movie_array.join("\n");
     document.getElementById("movies-list").innerHTML = output;
 }
