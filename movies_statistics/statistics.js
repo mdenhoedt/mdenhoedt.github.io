@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Munich (2005)', 7.6]
             ,['The Last King of Scotland (2006)', 7.7]
             ,['Rush Hour 2 (2001)', 6.6]
             ,['Saints and Soldiers: The Void (2014)', 5.1]
