@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Borat (2006)', 7.3]
             ,['Munich (2005)', 7.6]
             ,['The Last King of Scotland (2006)', 7.7]
             ,['Rush Hour 2 (2001)', 6.6]
