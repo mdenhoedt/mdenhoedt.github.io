@@ -12,7 +12,6 @@
 <a href="http://www.imdb.com/title/tt1355683" title="rating: 7.1" class="btn btn-default">Black Mass (2015)</a> 
 <a href="http://www.imdb.com/title/tt2719848" title="rating: 7.2" class="btn btn-default">Everest (2015)</a> 
 <a href="http://www.imdb.com/title/tt2515030" title="rating: 6.6" class="btn btn-default">Escobar: Paradise Lost (2014)</a> 
-<a href="http://www.imdb.com/title/tt0068646" title="rating: 9.2" class="btn btn-default">The Godfather (1972)</a> 
 <a href="http://www.imdb.com/title/tt0071562" title="rating: 9.0" class="btn btn-default">The Godfather: Part II (1974)</a> 
 <a href="http://www.imdb.com/title/tt0099674" title="rating: 7.6" class="btn btn-default">The Godfather: Part III (1990)</a> 
 <a href="http://www.imdb.com/title/tt1951266" title="rating: 7.0" class="btn btn-default">The Hunger Games: Mockingjay - Part 2 (2015)</a> 
