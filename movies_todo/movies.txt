@@ -1,7 +1,6 @@
 <a href="http://www.imdb.com/title/tt3859076" title="rating: 6.2" class="btn btn-default">Truth (2015)</a> 
 <a href="http://www.imdb.com/title/tt3569230" title="rating: 7.3" class="btn btn-default">Legend (2015)</a> 
 <a href="http://www.imdb.com/title/tt1895587" title="rating: 8.5" class="btn btn-default">Spotlight (2015)</a> 
-<a href="http://www.imdb.com/title/tt2361509" title="rating: 7.3" class="btn btn-default">The Intern (2015)</a> 
 <a href="http://www.imdb.com/title/tt3659388" title="rating: 8.2" class="btn btn-default">The Martian (2015)</a> 
 <a href="http://www.imdb.com/title/tt3460252" title="rating: 8.3" class="btn btn-default">The Hateful Eight (2015)</a> 
 <a href="http://www.imdb.com/title/tt4498460" title="rating: 6.7" class="btn btn-default">Tom Swift and His Electric Rifle (2015)</a> 
