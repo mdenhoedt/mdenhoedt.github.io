@@ -12,7 +12,7 @@ def main():
     with open('index.html', 'w') as file:
         file.write(start)
         file.write('<p class="lead">The ' + str(nr_of_movies) + ' ')
-        file.write('movies I have seen are listed on this page.</p>\n')
+        file.write('movies I have seen are listed on this page. The last 5 movies I have seen are labeled green.</p>\n')
         file.write(search_form)
         file.write('<p class="movies" id="movies-list">\n')
         file.write(movies)

@@ -303,9 +303,9 @@
 <a href="http://www.imdb.com/title/tt0102685" title="rating: 7.2" class="btn btn-default">Point Break (1991)</a> 
 <a href="http://www.imdb.com/title/tt1270114" title="rating: 5.1" class="btn btn-default">Saints and Soldiers: The Void (2014)</a> 
 <a href="http://www.imdb.com/title/tt0266915" title="rating: 6.6" class="btn btn-default">Rush Hour 2 (2001)</a> 
-<a href="http://www.imdb.com/title/tt0455590" title="rating: 7.7" class="btn btn-default">The Last King of Scotland (2006)</a> 
-<a href="http://www.imdb.com/title/tt0408306" title="rating: 7.6" class="btn btn-default">Munich (2005)</a> 
 <a href="http://www.imdb.com/title/tt0443453" title="rating: 7.3" class="btn btn-default">Borat (2006)</a> 
-<a href="http://www.imdb.com/title/tt0068646" title="rating: 9.2" class="btn btn-default">The Godfather (1972)</a> 
-<a href="http://www.imdb.com/title/tt3321300" title="rating: 6.3" class="btn btn-default">Spooks: The Greater Good (2015)</a> 
-<a href="http://www.imdb.com/title/tt2361509" title="rating: 7.2" class="btn btn-default">The Intern (2015)</a> 
+<a href="http://www.imdb.com/title/tt0455590" title="rating: 7.7" class="btn btn-success">The Last King of Scotland (2006)</a> 
+<a href="http://www.imdb.com/title/tt0408306" title="rating: 7.6" class="btn btn-success">Munich (2005)</a> 
+<a href="http://www.imdb.com/title/tt0068646" title="rating: 9.2" class="btn btn-success">The Godfather (1972)</a> 
+<a href="http://www.imdb.com/title/tt3321300" title="rating: 6.3" class="btn btn-success">Spooks: The Greater Good (2015)</a> 
+<a href="http://www.imdb.com/title/tt2361509" title="rating: 7.2" class="btn btn-success">The Intern (2015)</a> 

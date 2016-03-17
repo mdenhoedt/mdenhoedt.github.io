@@ -2,6 +2,7 @@ import urllib2, sys, cgi
 from bs4 import BeautifulSoup
 
 imdb = 'http://www.imdb.com/title/'
+nr_green = 5
 
 def get_html_imdb(url):
     return urllib2.urlopen(url).read().strip()
@@ -19,7 +20,7 @@ def get_html_movie(imdb_code):
     (title, rating) = get_info(html)
     t_html = cgi.escape(title).encode('ascii', 'xmlcharrefreplace')
     out = '<a href="' + link + '" title="rating: ' + rating + \
-            '" class="btn btn-default">' + t_html + '</a> '
+            '" class="btn btn-success">' + t_html + '</a> '
     return (out, title, rating)
 
 def add_to_statistics(title, rating):
@@ -44,15 +45,24 @@ def remove_from_todo_list(imdb_code):
                 f.write(line)
     return movie_in_todo
 
+def update_button_color(arr):
+    pos = len(arr) - nr_green - 2
+    arr[pos] = arr[pos].replace('btn-success', 'btn-default')
+
 def main():
     imdb_code = raw_input('enter imdb code: ')
     (link, title, rating) = get_html_movie(imdb_code.strip())
+    lines = []
     with open('movies.txt', 'r') as file:
-        if link in file.read():
-            print '"' + title + '" already in list'
-            return
-    with open('movies.txt', 'a') as file:
-        file.write(link + '\n')
+        lines = file.readlines()
+        for line in lines:
+            if link in lines:
+                print '"' + title + '" already in list'
+                return
+    with open('movies.txt', 'w') as file:
+        lines.append(link + '\n')
+        update_button_color(lines)
+        file.writelines(lines)
     add_to_statistics(title, rating)
     print 'succesfully added "' + title + '"'
     if remove_from_todo_list(imdb_code.strip()):
