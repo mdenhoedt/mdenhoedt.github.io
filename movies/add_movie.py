@@ -46,7 +46,7 @@ def remove_from_todo_list(imdb_code):
     return movie_in_todo
 
 def update_button_color(arr):
-    pos = len(arr) - nr_green - 2
+    pos = len(arr) - nr_green - 1
     arr[pos] = arr[pos].replace('btn-success', 'btn-default')
 
 def main():

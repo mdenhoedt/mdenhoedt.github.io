@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Black Mass (2015)', 7.0]
             ,['The Intern (2015)', 7.2]
             ,['Spooks: The Greater Good (2015)', 6.3]
             ,['The Godfather (1972)', 9.2]
