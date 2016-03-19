@@ -47,4 +47,3 @@
 <a href="http://www.imdb.com/title/tt3553442" title="rating: 7.0" class="btn btn-success">Whiskey Tango Foxtrot (2016)</a> 
 <a href="http://www.imdb.com/title/tt2057392" title="rating: 7.5" class="btn btn-success">Eye in the Sky (2015)</a> 
 <a href="http://www.imdb.com/title/tt0105236" title="rating: 8.4" class="btn btn-success">Reservoir Dogs (1992)</a> 
-<a href="http://www.imdb.com/title/tt3569230" title="rating: 7.0" class="btn btn-success">Legend (2015)</a> 
