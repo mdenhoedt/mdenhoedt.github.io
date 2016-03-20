@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['The Prestige (2006)', 8.5]
             ,['Deadpool (2016)', 8.4]
             ,['Black Mass (2015)', 7.0]
             ,['The Intern (2015)', 7.2]
