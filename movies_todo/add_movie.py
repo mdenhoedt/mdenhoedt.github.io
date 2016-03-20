@@ -29,13 +29,14 @@ def get_html_movie(imdb_code):
 def update_button_color(arr):
     global nr_color
     for i in range(len(arr)):
-        arr[i] = arr[i].replace('btn-succes', 'btn-default')
-        arr[i] = arr[i].replace('btn-danger', 'btn-success')
+        arr[i] = arr[i].replace('btn-success', 'btn-default')
+        arr[i] = arr[i].replace('btn-danger', 'btn-default')
     if len(arr) < 10:
         nr_color = len(arr) / 2
     for i in range(nr_color):
-        arr[len(arr) - i - 1] = arr[len(arr) - i - 1].replace('btn-default', 'btn-danger')
-        arr[i] = arr[i].replace('btn-default', 'btn-succes')
+        index = len(arr) - i - 1
+        arr[index] = arr[index].replace('btn-default', 'btn-success')
+        arr[i] = arr[i].replace('btn-default', 'btn-danger')
 
 def main():
     imdb_code = raw_input('enter imdb code: ')
@@ -49,7 +50,6 @@ def main():
                 return
     lines.append(link + '\n')
     update_button_color(lines)
-    print lines
     with open('movies.txt', 'w') as file:
         file.writelines(lines)
     print 'succesfully added "' + title + '" to the TODO list'
