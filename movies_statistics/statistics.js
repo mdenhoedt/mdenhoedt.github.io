@@ -3,6 +3,9 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Transporter 3 (2008)', 6.1]
+            ,['Transporter 2 (2005)', 6.3]
+            ,['The Transporter (2002)', 6.8]
             ,['The Prestige (2006)', 8.5]
             ,['Deadpool (2016)', 8.4]
             ,['Black Mass (2015)', 7.0]
