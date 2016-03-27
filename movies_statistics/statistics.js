@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['The Big Short (2015)', 7.8]
             ,['Transporter 3 (2008)', 6.1]
             ,['Transporter 2 (2005)', 6.3]
             ,['The Transporter (2002)', 6.8]
