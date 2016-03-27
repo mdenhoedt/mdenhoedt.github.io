@@ -1,6 +1,6 @@
 var movie_array;
 var sort_year, sort_title, sort_rating;
-var toggle_year = false;
+var toggle_year = true;
 var toggle_title = false;
 var toggle_rating = false;
 
