@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Gravity (2013)', 7.8]
             ,['Big (1988)', 7.3]
             ,['Cast Away (2000)', 7.7]
             ,['The Godfather: Part II (1974)', 9.0]
