@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Legend (2015)', 7.0]
+            ,['Pawn Sacrifice (2014)', 7.0]
             ,['Gravity (2013)', 7.8]
             ,['Big (1988)', 7.3]
             ,['Cast Away (2000)', 7.7]
