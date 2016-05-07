@@ -41,7 +41,6 @@
 <a href="http://www.imdb.com/title/tt2057392" title="rating: 7.5" class="btn btn-default">Eye in the Sky (2015)</a> 
 <a href="http://www.imdb.com/title/tt0105236" title="rating: 8.4" class="btn btn-default">Reservoir Dogs (1992)</a> 
 <a href="http://www.imdb.com/title/tt2302755" title="rating: 6.5" class="btn btn-default">Olympus Has Fallen (2013)</a> 
-<a href="http://www.imdb.com/title/tt2080374" title="rating: 7.3" class="btn btn-default">Steve Jobs (2015)</a> 
 <a href="http://www.imdb.com/title/tt0095953" title="rating: 8.0" class="btn btn-default">Rain Man (1988)</a> 
 <a href="http://www.imdb.com/title/tt1712261" title="rating: 6.5" class="btn btn-success">Triple 9 (2016)</a> 
 <a href="http://www.imdb.com/title/tt2975590" title="rating: 7.2" class="btn btn-success">Batman v Superman: Dawn of Justice (2016)</a> 
