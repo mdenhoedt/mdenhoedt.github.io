@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Now You See Me (2013)', 7.3]
             ,['Steve Jobs (2015)', 7.3]
             ,['The Martian (2015)', 8.1]
             ,['The Hateful Eight (2015)', 7.9]
