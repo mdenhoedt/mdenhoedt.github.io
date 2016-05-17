@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Truth (2015)', 6.8]
             ,['The Brooke Ellison Story (TV Movie 2004)', 7.2]
             ,['Now You See Me (2013)', 7.3]
             ,['Steve Jobs (2015)', 7.3]

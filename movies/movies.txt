@@ -323,8 +323,9 @@
 <a href="http://www.imdb.com/title/tt0071562" title="rating: 9.0" class="btn btn-default">The Godfather: Part II (1974)</a> 
 <a href="http://www.imdb.com/title/tt1454468" title="rating: 7.8" class="btn btn-default">Gravity (2013)</a> 
 <a href="http://www.imdb.com/title/tt1596345" title="rating: 7.0" class="btn btn-default">Pawn Sacrifice (2014)</a> 
-<a href="http://www.imdb.com/title/tt3569230" title="rating: 7.0" class="btn btn-success">Legend (2015)</a> 
+<a href="http://www.imdb.com/title/tt3569230" title="rating: 7.0" class="btn btn-default">Legend (2015)</a> 
 <a href="http://www.imdb.com/title/tt3460252" title="rating: 7.9" class="btn btn-success">The Hateful Eight (2015)</a> 
 <a href="http://www.imdb.com/title/tt3659388" title="rating: 8.1" class="btn btn-success">The Martian (2015)</a> 
 <a href="http://www.imdb.com/title/tt2080374" title="rating: 7.3" class="btn btn-success">Steve Jobs (2015)</a> 
 <a href="http://www.imdb.com/title/tt0407612" title="rating: 7.2" class="btn btn-success">The Brooke Ellison Story (2004)</a> 
+<a href="http://www.imdb.com/title/tt3859076" title="rating: 6.8" class="btn btn-success">Truth (2015)</a> 
