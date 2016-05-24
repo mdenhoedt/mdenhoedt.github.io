@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Olympus Has Fallen (2013)', 6.5]
             ,['Ride Along (2014)', 6.2]
             ,['Truth (2015)', 6.8]
             ,['The Brooke Ellison Story (TV Movie 2004)', 7.2]
