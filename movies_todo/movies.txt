@@ -1,4 +1,3 @@
-<a href="http://www.imdb.com/title/tt1895587" title="rating: 8.5" class="btn btn-danger">Spotlight (2015)</a> 
 <a href="http://www.imdb.com/title/tt3268668" title="rating: 5.8" class="btn btn-danger">Captive (2015)</a> 
 <a href="http://www.imdb.com/title/tt4498460" title="rating: 6.7" class="btn btn-danger">Tom Swift and His Electric Rifle (2015)</a> 
 <a href="http://www.imdb.com/title/tt2719848" title="rating: 7.2" class="btn btn-danger">Everest (2015)</a> 
