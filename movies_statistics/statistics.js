@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Captain America: Civil War (2016)', 8.3]
             ,['Everest (2015)', 7.1]
             ,['Spotlight (2015)', 8.1]
             ,['White House Down (2013)', 6.4]
