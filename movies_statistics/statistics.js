@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Triple 9 (2016)', 6.3]
             ,['Air Force One (1997)', 6.4]
             ,['Spy Game (2001)', 7.0]
             ,['The Hunger Games: Mockingjay - Part 2 (2015)', 6.6]
