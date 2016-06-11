@@ -23,7 +23,6 @@
 <a href="http://www.imdb.com/title/tt2304933" title="rating: 5.6" class="btn btn-default">The 5th Wave (2016)</a> 
 <a href="http://www.imdb.com/title/tt1860213" title="rating: 6.1" class="btn btn-default">Dirty Grandpa (2016)</a> 
 <a href="http://www.imdb.com/title/tt5320892" title="rating: 7.6" class="btn btn-default">Buurman &amp; Buurman - Al 40 jaar beste vrienden! (2016)</a> 
-<a href="http://www.imdb.com/title/tt4172430" title="rating: 7.6" class="btn btn-default">13 Hours: The Secret Soldiers of Benghazi (2016)</a> 
 <a href="http://www.imdb.com/title/tt1386697" title="rating: -"   class="btn btn-default">Suicide Squad (2016)</a> 
 <a href="http://www.imdb.com/title/tt3072482" title="rating: 8.1" class="btn btn-default">Hardcore Henry (2015)</a> 
 <a href="http://www.imdb.com/title/tt3231054" title="rating: 7.0" class="btn btn-default">Risen (2016)</a> 
