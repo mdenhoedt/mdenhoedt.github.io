@@ -55,4 +55,3 @@
 <a href="http://www.imdb.com/title/tt0253474" title="rating: 8.5" class="btn btn-success">The Pianist (2002)</a> 
 <a href="http://www.imdb.com/title/tt0070825" title="rating: 6.4" class="btn btn-success">De jakhalzen van het westen (1973)</a> 
 <a href="http://www.imdb.com/title/tt1568911" title="rating: 7.2" class="btn btn-success">War Horse (2011)</a> 
-<a href="http://www.imdb.com/title/tt0816711" title="rating: 7.0" class="btn btn-success">World War Z (2013)</a> 
