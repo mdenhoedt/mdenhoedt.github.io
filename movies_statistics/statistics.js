@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Flight (2012)', 7.3]
+            ,['City of God (2002)', 8.7]
             ,['World War Z (2013)', 7.0]
             ,['13 Hours: The Secret Soldiers of Benghazi (2016)', 7.4]
             ,['Triple 9 (2016)', 6.3]
