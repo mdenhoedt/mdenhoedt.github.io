@@ -50,8 +50,14 @@
 <a href="http://www.imdb.com/title/tt1037705" title="rating: 6.9" class="btn btn-default">The Book of Eli (2010)</a> 
 <a href="http://www.imdb.com/title/tt2326612" title="rating: 5.9" class="btn btn-default">The Captive (2014)</a> 
 <a href="http://www.imdb.com/title/tt2726560" title="rating: 7.1" class="btn btn-default">The Longest Ride (2015)</a> 
-<a href="http://www.imdb.com/title/tt0253474" title="rating: 8.5" class="btn btn-success">The Pianist (2002)</a> 
-<a href="http://www.imdb.com/title/tt0070825" title="rating: 6.4" class="btn btn-success">De jakhalzen van het westen (1973)</a> 
-<a href="http://www.imdb.com/title/tt1568911" title="rating: 7.2" class="btn btn-success">War Horse (2011)</a> 
-<a href="http://www.imdb.com/title/tt1483013" title="rating: 7.0" class="btn btn-success">Oblivion (2013)</a> 
-<a href="http://www.imdb.com/title/tt1599348" title="rating: 6.8" class="btn btn-success">Safe House (2012)</a> 
+<a href="http://www.imdb.com/title/tt0253474" title="rating: 8.5" class="btn btn-default">The Pianist (2002)</a> 
+<a href="http://www.imdb.com/title/tt0070825" title="rating: 6.4" class="btn btn-default">De jakhalzen van het westen (1973)</a> 
+<a href="http://www.imdb.com/title/tt1568911" title="rating: 7.2" class="btn btn-default">War Horse (2011)</a> 
+<a href="http://www.imdb.com/title/tt1483013" title="rating: 7.0" class="btn btn-default">Oblivion (2013)</a> 
+<a href="http://www.imdb.com/title/tt1599348" title="rating: 6.8" class="btn btn-default">Safe House (2012)</a> 
+<a href="http://www.imdb.com/title/tt4094724" title="rating: 6.6" class="btn btn-default">The Purge: Election Year (2016)</a> 
+<a href="http://www.imdb.com/title/tt0918940" title="rating: 7.1" class="btn btn-success">The Legend of Tarzan (2016)</a> 
+<a href="http://www.imdb.com/title/tt2978102" title="rating: 5.4" class="btn btn-success">Term Life (2016)</a> 
+<a href="http://www.imdb.com/title/tt1628841" title="rating: 5.6" class="btn btn-success">Independence Day: Resurgence (2016)</a> 
+<a href="http://www.imdb.com/title/tt1489889" title="rating: 6.8" class="btn btn-success">Central Intelligence (2016)</a> 
+<a href="http://www.imdb.com/title/tt4438848" title="rating: 6.1" class="btn btn-success">Bad Neighbours 2 (2016)</a> 
