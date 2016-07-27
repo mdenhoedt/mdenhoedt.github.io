@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['The Revenant (2015)', 8.1]
             ,['The Grand Budapest Hotel (2014)', 8.1]
             ,['Flight (2012)', 7.3]
             ,['City of God (2002)', 8.7]
