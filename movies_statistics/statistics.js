@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Man on a Ledge (2012)', 6.6]
+            ,['The Raid 2: Berandal (2014)', 8.0]
             ,['The Revenant (2015)', 8.1]
             ,['The Grand Budapest Hotel (2014)', 8.1]
             ,['Flight (2012)', 7.3]
