@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Shoot 'Em Up (2007)', 6.7]
+            ,['2 Guns (2013)', 6.7]
             ,['Man on a Ledge (2012)', 6.6]
             ,['The Raid 2: Berandal (2014)', 8.0]
             ,['The Revenant (2015)', 8.1]
