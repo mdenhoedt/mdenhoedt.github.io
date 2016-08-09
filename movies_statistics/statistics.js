@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Eye in the Sky (2015)', 7.4]
             ,['Shoot 'Em Up (2007)', 6.7]
             ,['2 Guns (2013)', 6.7]
             ,['Man on a Ledge (2012)', 6.6]

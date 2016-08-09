@@ -29,7 +29,6 @@
 <a href="http://www.imdb.com/title/tt3147312" title="rating: 4.8" class="btn btn-default">Desierto (2015)</a> 
 <a href="http://www.imdb.com/title/tt3499096" title="rating: 6.9" class="btn btn-default">Race (2016)</a> 
 <a href="http://www.imdb.com/title/tt3553442" title="rating: 7.0" class="btn btn-default">Whiskey Tango Foxtrot (2016)</a> 
-<a href="http://www.imdb.com/title/tt2057392" title="rating: 7.5" class="btn btn-default">Eye in the Sky (2015)</a> 
 <a href="http://www.imdb.com/title/tt0105236" title="rating: 8.4" class="btn btn-default">Reservoir Dogs (1992)</a> 
 <a href="http://www.imdb.com/title/tt0095953" title="rating: 8.0" class="btn btn-default">Rain Man (1988)</a> 
 <a href="http://www.imdb.com/title/tt2975590" title="rating: 7.2" class="btn btn-default">Batman v Superman: Dawn of Justice (2016)</a> 
