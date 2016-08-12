@@ -19,7 +19,6 @@
 <a href="http://www.imdb.com/title/tt2304933" title="rating: 5.6" class="btn btn-default">The 5th Wave (2016)</a> 
 <a href="http://www.imdb.com/title/tt1860213" title="rating: 6.1" class="btn btn-default">Dirty Grandpa (2016)</a> 
 <a href="http://www.imdb.com/title/tt5320892" title="rating: 7.6" class="btn btn-default">Buurman &amp; Buurman - Al 40 jaar beste vrienden! (2016)</a> 
-<a href="http://www.imdb.com/title/tt1386697" title="rating: -"   class="btn btn-default">Suicide Squad (2016)</a> 
 <a href="http://www.imdb.com/title/tt3072482" title="rating: 8.1" class="btn btn-default">Hardcore Henry (2015)</a> 
 <a href="http://www.imdb.com/title/tt3231054" title="rating: 7.0" class="btn btn-default">Risen (2016)</a> 
 <a href="http://www.imdb.com/title/tt2404233" title="rating: 5.5" class="btn btn-default">Gods of Egypt (2016)</a> 
@@ -52,7 +51,6 @@
 <a href="http://www.imdb.com/title/tt1568911" title="rating: 7.2" class="btn btn-default">War Horse (2011)</a> 
 <a href="http://www.imdb.com/title/tt1483013" title="rating: 7.0" class="btn btn-default">Oblivion (2013)</a> 
 <a href="http://www.imdb.com/title/tt1599348" title="rating: 6.8" class="btn btn-default">Safe House (2012)</a> 
-<a href="http://www.imdb.com/title/tt4094724" title="rating: 6.6" class="btn btn-default">The Purge: Election Year (2016)</a> 
 <a href="http://www.imdb.com/title/tt0918940" title="rating: 7.1" class="btn btn-default">The Legend of Tarzan (2016)</a> 
 <a href="http://www.imdb.com/title/tt2978102" title="rating: 5.4" class="btn btn-default">Term Life (2016)</a> 
 <a href="http://www.imdb.com/title/tt1628841" title="rating: 5.6" class="btn btn-default">Independence Day: Resurgence (2016)</a> 

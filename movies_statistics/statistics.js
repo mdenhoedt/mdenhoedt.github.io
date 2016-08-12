@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Suicide Squad (2016)', 6.9]
+            ,['The Purge: Election Year (2016)', 6.1]
             ,['Pain & Gain (2013)', 6.5]
             ,['Eye in the Sky (2015)', 7.4]
             ,['Shoot 'Em Up (2007)', 6.7]
