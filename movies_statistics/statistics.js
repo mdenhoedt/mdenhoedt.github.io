@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Safe House (2012)', 6.8]
+            ,['Hardcore Henry (2015)', 6.8]
             ,['The Usual Suspects (1995)', 8.6]
             ,['Suicide Squad (2016)', 6.9]
             ,['The Purge: Election Year (2016)', 6.1]

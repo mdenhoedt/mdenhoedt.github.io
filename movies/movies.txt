@@ -349,8 +349,10 @@
 <a href="http://www.imdb.com/title/tt1568338" title="rating: 6.6" class="btn btn-default">Man on a Ledge (2012)</a> 
 <a href="http://www.imdb.com/title/tt1272878" title="rating: 6.7" class="btn btn-default">2 Guns (2013)</a> 
 <a href="http://www.imdb.com/title/tt0465602" title="rating: 6.7" class="btn btn-default">Shoot 'Em Up (2007)</a> 
-<a href="http://www.imdb.com/title/tt2057392" title="rating: 7.4" class="btn btn-success">Eye in the Sky (2015)</a> 
-<a href="http://www.imdb.com/title/tt1980209" title="rating: 6.5" class="btn btn-success">Pain &amp; Gain (2013)</a> 
+<a href="http://www.imdb.com/title/tt2057392" title="rating: 7.4" class="btn btn-default">Eye in the Sky (2015)</a> 
+<a href="http://www.imdb.com/title/tt1980209" title="rating: 6.5" class="btn btn-default">Pain &amp; Gain (2013)</a> 
 <a href="http://www.imdb.com/title/tt4094724" title="rating: 6.1" class="btn btn-success">The Purge: Election Year (2016)</a> 
 <a href="http://www.imdb.com/title/tt1386697" title="rating: 6.9" class="btn btn-success">Suicide Squad (2016)</a> 
 <a href="http://www.imdb.com/title/tt0114814" title="rating: 8.6" class="btn btn-success">The Usual Suspects (1995)</a> 
+<a href="http://www.imdb.com/title/tt3072482" title="rating: 6.8" class="btn btn-success">Hardcore Henry (2015)</a> 
+<a href="http://www.imdb.com/title/tt1599348" title="rating: 6.8" class="btn btn-success">Safe House (2012)</a> 
