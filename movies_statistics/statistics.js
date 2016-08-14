@@ -10,7 +10,7 @@ function drawChart() {
             ,['The Purge: Election Year (2016)', 6.1]
             ,['Pain & Gain (2013)', 6.5]
             ,['Eye in the Sky (2015)', 7.4]
-            ,['Shoot 'Em Up (2007)', 6.7]
+            ,['Shoot \'Em Up (2007)', 6.7]
             ,['2 Guns (2013)', 6.7]
             ,['Man on a Ledge (2012)', 6.6]
             ,['The Raid 2: Berandal (2014)', 8.0]
