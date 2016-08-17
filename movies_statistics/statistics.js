@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Whiskey Tango Foxtrot (2016)', 6.6]
             ,['Under sandet (2015)', 7.8]
             ,['Safe House (2012)', 6.8]
             ,['Hardcore Henry (2015)', 6.8]
