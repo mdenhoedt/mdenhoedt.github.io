@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Mr. Holmes (2015)', 6.9]
             ,['Click (2006)', 6.4]
             ,['Whiskey Tango Foxtrot (2016)', 6.6]
             ,['Under sandet (2015)', 7.8]
