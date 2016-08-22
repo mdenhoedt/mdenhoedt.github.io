@@ -355,8 +355,9 @@
 <a href="http://www.imdb.com/title/tt1386697" title="rating: 6.9" class="btn btn-default">Suicide Squad (2016)</a> 
 <a href="http://www.imdb.com/title/tt0114814" title="rating: 8.6" class="btn btn-default">The Usual Suspects (1995)</a> 
 <a href="http://www.imdb.com/title/tt3072482" title="rating: 6.8" class="btn btn-default">Hardcore Henry (2015)</a> 
-<a href="http://www.imdb.com/title/tt1599348" title="rating: 6.8" class="btn btn-success">Safe House (2012)</a> 
+<a href="http://www.imdb.com/title/tt1599348" title="rating: 6.8" class="btn btn-default">Safe House (2012)</a> 
 <a href="http://www.imdb.com/title/tt3841424" title="rating: 7.8" class="btn btn-success">Under sandet (2015)</a> 
 <a href="http://www.imdb.com/title/tt3553442" title="rating: 6.6" class="btn btn-success">Whiskey Tango Foxtrot (2016)</a> 
 <a href="http://www.imdb.com/title/tt0389860" title="rating: 6.4" class="btn btn-success">Click (2006)</a> 
 <a href="http://www.imdb.com/title/tt3168230" title="rating: 6.9" class="btn btn-success">Mr. Holmes (2015)</a> 
+<a href="http://www.imdb.com/title/tt1663662" title="rating: 7.0" class="btn btn-success">Pacific Rim (2013)</a> 
