@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['The 5th Wave (2016)', 5.2]
             ,['Pacific Rim (2013)', 7.0]
             ,['Mr. Holmes (2015)', 6.9]
             ,['Click (2006)', 6.4]
