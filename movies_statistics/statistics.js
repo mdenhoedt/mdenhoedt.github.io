@@ -3,6 +3,9 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Oblivion (2013)', 7.0]
+            ,['Prisoners (2013)', 8.1]
+            ,['Reservoir Dogs (1992)', 8.4]
             ,['Rendition (2007)', 6.8]
             ,['Side Effects (2013)', 7.1]
             ,['The 5th Wave (2016)', 5.2]
