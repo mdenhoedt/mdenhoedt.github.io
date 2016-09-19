@@ -373,6 +373,5 @@
 <a href="http://www.imdb.com/title/tt1172049" title="rating: 7.1" class="btn btn-default">Demolition (2015)</a> 
 <a href="http://www.imdb.com/title/tt0462504" title="rating: 7.3" class="btn btn-success">Rescue Dawn (2006)</a> 
 <a href="http://www.imdb.com/title/tt1323594" title="rating: 7.7" class="btn btn-success">Despicable Me (2010)</a> 
-
 <a href="http://www.imdb.com/title/tt3300542" title="rating: 5.9" class="btn btn-success">London Has Fallen (2016)</a> 
 <a href="http://www.imdb.com/title/tt0268978" title="rating: 8.2" class="btn btn-success">A Beautiful Mind (2001)</a> 
