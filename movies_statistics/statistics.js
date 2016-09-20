@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Travelling Salesman (2012)', 5.9]
             ,['A Beautiful Mind (2001)', 8.2]
             ,['London Has Fallen (2016)', 5.9]
             ,['Submerged (Video 2005)', 3.7]
