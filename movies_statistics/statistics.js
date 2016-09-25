@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Man of Steel (2013)', 7.1]
+            ,['A Hologram for the King (2016)', 6.1]
             ,['Sausage Party (2016)', 6.7]
             ,['Bastille Day (2016)', 6.3]
             ,['Travelling Salesman (2012)', 5.9]
