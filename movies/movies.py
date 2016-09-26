@@ -49,23 +49,67 @@ def update_button_color(arr):
     pos = len(arr) - nr_green - 1
     arr[pos] = arr[pos].replace('btn-success', 'btn-default')
 
-def main():
+def generate(folder, todo):
+    with open(folder + 'start.txt', 'r') as file:
+        start = file.read()
+    with open(folder + 'movies.txt', 'r') as file:
+        movies = [e.strip() for e in file]
+        nr_of_movies = len(movies)
+        movies = '\n'.join(movies)
+    with open('search_form.txt', 'r') as file:
+        search_form = file.read()
+    with open('end.txt', 'r') as file:
+        end = file.read()
+    with open(folder + 'index.html', 'w') as file:
+        file.write(start)
+        file.write('<p class="lead">The ' + str(nr_of_movies) + ' ')
+        if todo:
+            file.write('movies I want to watch are listed on this page. The 5 most ')
+            file.write('recently added are marked green and the movies marked red are ')
+            file.write('the longest in this list.</p>\n')
+        else:
+            file.write('movies I have seen are listed on this page. The last 5 ')
+            file.write('movies I have seen are labeled green.</p>\n')
+        file.write(search_form)
+        file.write('<p class="movies" id="movies-list">\n')
+        file.write(movies)
+        file.write(end)
+
+def add_movie(folder, todo):
     imdb_code = raw_input('enter imdb code: ')
     (link, title, rating) = get_html_movie(imdb_code.strip())
     lines = []
-    with open('movies.txt', 'r') as file:
+    with open(folder + 'movies.txt', 'r') as file:
         lines = file.readlines()
         for line in lines:
             if link in lines:
                 print '"' + title + '" already in list'
                 return
-    with open('movies.txt', 'w') as file:
+    with open(folder + 'movies.txt', 'w') as file:
         lines.append(link + '\n')
         update_button_color(lines)
         file.writelines(lines)
-    add_to_statistics(title, rating)
-    print 'succesfully added "' + title + '"'
-    if remove_from_todo_list(imdb_code.strip()):
+    if not todo:
+        add_to_statistics(title, rating)
+    print 'succesfully added "' + title + '"',
+    if todo:
+        print 'to the TODO list.'
+    else:
+        print 'to the WATCH list.'
+    if not todo and remove_from_todo_list(imdb_code.strip()):
         print 'succesfully removed "' + title + '" from the todo list'
 
-main()
+def main():
+    if len(sys.argv) < 2:
+        print 'not enough arguments'
+
+    if sys.argv[1] == '--generate':
+        generate('', False)
+        generate('../movies_todo/', True)
+    if sys.argv[1] == '--add':
+        add_movie('', False)
+    if sys.argv[1] == '--todo':
+        add_movie('../movies_todo/', True)
+
+if __name__ == '__main__':
+    main()
