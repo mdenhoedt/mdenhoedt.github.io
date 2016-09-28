@@ -1,4 +1,4 @@
-import urllib2, sys, cgi
+import urllib2, sys, cgi, json
 from bs4 import BeautifulSoup
 
 imdb = 'http://www.imdb.com/title/'
@@ -25,13 +25,13 @@ def get_html_movie(imdb_code):
 
 def add_to_statistics(title, rating):
     file_name = '../movies_statistics/statistics.js'
-    with open(file_name, 'r') as file:
-        contents = file.readlines()
+    with open(file_name) as f:
+        contents = f.readlines()
     line = "            ,['" + title + "', " + rating + "]\n"
     contents.insert(5, line)
-    with open(file_name, 'w') as file:
+    with open(file_name, 'w') as f:
         output = "".join(contents)
-        file.write(output)
+        f.write(output)
 
 def remove_from_todo_list(imdb_code):
     with open('../movies_todo/movies.txt') as f:
@@ -49,46 +49,56 @@ def update_button_color(arr):
     pos = len(arr) - nr_green - 1
     arr[pos] = arr[pos].replace('btn-success', 'btn-default')
 
+def json_to_html(movie, btn_type='default'):
+    html = '<a href="{0}" title="rating: {1}" class="btn btn-{4}">{2} ({3})</a>\n'
+    if 'rating' in movie:
+        rating = movie['rating']
+    else:
+        rating = '-'
+    return html.format(movie['url'], rating, movie['title'], movie['year'], btn_type)
+
 def generate(folder, todo):
-    with open(folder + 'start.txt', 'r') as file:
-        start = file.read()
-    with open(folder + 'movies.txt', 'r') as file:
-        movies = [e.strip() for e in file]
-        nr_of_movies = len(movies)
-        movies = '\n'.join(movies)
-    with open('search_form.txt', 'r') as file:
-        search_form = file.read()
-    with open('end.txt', 'r') as file:
-        end = file.read()
-    with open(folder + 'index.html', 'w') as file:
-        file.write(start)
-        file.write('<p class="lead">The ' + str(nr_of_movies) + ' ')
+    with open(folder + 'start.txt') as f:
+        start_html = f.read()
+    with open(folder + 'movies.json') as f:
+        data = json.load(f)
+        if 'movies' not in data:
+            return
+        movies = data['movies']
+    with open('search_form.txt') as f:
+        search_form = f.read()
+    with open('end.txt') as f:
+        end_html = f.read()
+    with open(folder + 'index.html', 'w') as f:
+        f.write(start_html)
+        f.write('<p class="lead">The ' + str(len(movies)) + ' ')
         if todo:
-            file.write('movies I want to watch are listed on this page. The 5 most ')
-            file.write('recently added are marked green and the movies marked red are ')
-            file.write('the longest in this list.</p>\n')
+            f.write('movies I want to watch are listed on this page. The 5 most ')
+            f.write('recently added are marked green and the movies marked red are ')
+            f.write('the longest in this list.</p>\n')
         else:
-            file.write('movies I have seen are listed on this page. The last 5 ')
-            file.write('movies I have seen are labeled green.</p>\n')
-        file.write(search_form)
-        file.write('<p class="movies" id="movies-list">\n')
-        file.write(movies)
-        file.write(end)
+            f.write('movies I have seen are listed on this page. The last 5 ')
+            f.write('movies I have seen are labeled green.</p>\n')
+        f.write(search_form)
+        f.write('<p class="movies" id="movies-list">\n')
+        for movie in movies:
+            f.write(json_to_html(movie))
+        f.write(end_html)
 
 def add_movie(folder, todo):
     imdb_code = raw_input('enter imdb code: ')
     (link, title, rating) = get_html_movie(imdb_code.strip())
     lines = []
-    with open(folder + 'movies.txt', 'r') as file:
-        lines = file.readlines()
+    with open(folder + 'movies.txt') as f:
+        lines = f.readlines()
         for line in lines:
             if link in lines:
                 print '"' + title + '" already in list'
                 return
-    with open(folder + 'movies.txt', 'w') as file:
+    with open(folder + 'movies.txt', 'w') as f:
         lines.append(link + '\n')
         update_button_color(lines)
-        file.writelines(lines)
+        f.writelines(lines)
     if not todo:
         add_to_statistics(title, rating)
     print 'succesfully added "' + title + '"',
