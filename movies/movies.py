@@ -50,12 +50,12 @@ def update_button_color(arr):
     arr[pos] = arr[pos].replace('btn-success', 'btn-default')
 
 def json_to_html(movie, btn_type='default'):
-    html = '<a href="{0}" title="rating: {1}" class="btn btn-{4}">{2} ({3})</a>\n'
+    html = '<a href="http://www.imdb.com/title/{0}" title="rating: {1}" class="btn btn-{4}">{2} ({3})</a>\n'
     if 'rating' in movie:
         rating = movie['rating']
     else:
         rating = '-'
-    return html.format(movie['url'], rating, movie['title'], movie['year'], btn_type)
+    return html.format(movie['id'], rating, movie['title'], movie['year'], btn_type)
 
 def generate(folder, todo):
     with open(folder + 'start.txt') as f:
