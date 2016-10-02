@@ -1,27 +1,28 @@
-import urllib2, sys, cgi, json
+import urllib2, sys, cgi, json, re
 from bs4 import BeautifulSoup
 
-imdb = 'http://www.imdb.com/title/'
+imdb_url = 'http://www.imdb.com/title/'
 nr_green = 5
 
-def get_html_imdb(url):
-    return urllib2.urlopen(url).read().strip()
+def get_html_imdb(imdb_code):
+    return urllib2.urlopen(imdb_url + imdb_code).read().strip()
 
 def get_info(html):
     soup = BeautifulSoup(html, 'html.parser')
-    title = soup.title.string
-    rating = soup.find('span', {'itemprop': 'ratingValue'})
-    rate = str(rating.text).strip()
-    return (title.replace(' - IMDb', ''), rate)
+    title = str(soup.find('h1', {'itemprop': 'name'}).text.strip()[:-7])
+    rating = str(soup.find('span', {'itemprop': 'ratingValue'}).text).strip()
+    year = int(soup.find('span', {'id': 'titleYear'}).find('a').text)
+    print title
+    return title, rating, year
 
-def get_html_movie(imdb_code):
-    link = imdb + imdb_code
-    html = get_html_imdb(link)
-    (title, rating) = get_info(html)
-    t_html = cgi.escape(title).encode('ascii', 'xmlcharrefreplace')
-    out = '<a href="' + link + '" title="rating: ' + rating + \
-            '" class="btn btn-success">' + t_html + '</a> '
-    return (out, title, rating)
+def get_json_movie(imdb_code):
+    html = get_html_imdb(imdb_code)
+    title, rating, year = get_info(html)
+    return {'id': imdb_code,
+            'title': title,
+            'rating':rating,
+            'year': year
+            }
 
 def add_to_statistics(title, rating):
     file_name = '../movies_statistics/statistics.js'
@@ -85,22 +86,30 @@ def generate(folder, todo):
             f.write(json_to_html(movie))
         f.write(end_html)
 
+def add_movie_to_json(file_name, new_movie):
+    with open(file_name) as f:
+        data = json.load(f)
+    if 'movies' not in data:
+        print 'invalid JSON file'
+        return False
+    for movie in data['movies']:
+        if new_movie['id'] == movie['id']:
+            print 'movie already added'
+            return False
+    data['movies'].append(new_movie)
+    with open(file_name, 'w') as f:
+        json.dump(data, f)
+    return True
+
 def add_movie(folder, todo):
     imdb_code = raw_input('enter imdb code: ')
-    (link, title, rating) = get_html_movie(imdb_code.strip())
-    lines = []
-    with open(folder + 'movies.txt') as f:
-        lines = f.readlines()
-        for line in lines:
-            if link in lines:
-                print '"' + title + '" already in list'
-                return
-    with open(folder + 'movies.txt', 'w') as f:
-        lines.append(link + '\n')
-        update_button_color(lines)
-        f.writelines(lines)
+    new_movie = get_json_movie(imdb_code.strip())
+    print new_movie
+    if not add_movie_to_json(folder + 'movies.json', new_movie):
+        return
+
     if not todo:
-        add_to_statistics(title, rating)
+        add_to_statistics(new_movie['title'], new_movie['rating'])
     print 'succesfully added "' + title + '"',
     if todo:
         print 'to the TODO list.'
