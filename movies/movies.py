@@ -12,7 +12,6 @@ def get_info(html):
     title = str(soup.find('h1', {'itemprop': 'name'}).text.strip()[:-7])
     rating = str(soup.find('span', {'itemprop': 'ratingValue'}).text).strip()
     year = int(soup.find('span', {'id': 'titleYear'}).find('a').text)
-    print title
     return title, rating, year
 
 def get_json_movie(imdb_code):
@@ -33,22 +32,6 @@ def add_to_statistics(title, rating):
     with open(file_name, 'w') as f:
         output = "".join(contents)
         f.write(output)
-
-def remove_from_todo_list(imdb_code):
-    with open('../movies_todo/movies.txt') as f:
-        lines = f.readlines()
-    movie_in_todo = False
-    with open('../movies_todo/movies.txt', 'w') as f:
-        for line in lines:
-            if imdb_code in line:
-                movie_in_todo = True
-            else:
-                f.write(line)
-    return movie_in_todo
-
-def update_button_color(arr):
-    pos = len(arr) - nr_green - 1
-    arr[pos] = arr[pos].replace('btn-success', 'btn-default')
 
 def json_to_html(movie, btn_type='default'):
     html = '<a href="http://www.imdb.com/title/{0}" title="rating: {1}" class="btn btn-{4}">{2} ({3})</a>\n'
@@ -86,6 +69,18 @@ def generate(folder, todo):
             f.write(json_to_html(movie))
         f.write(end_html)
 
+def remove_movie_from_json(file_name, movie):
+    with open(file_name) as f:
+        data = json.load(f)
+    if 'movies' not in data:
+        print 'invalid JSON file'
+        return False
+    nr_movies = len(data['movies'])
+    data['movies'] = filter(lambda e: e['id'] != movie, data['movies'])
+    with open(file_name, 'w') as f:
+        json.dump(data, f)
+    return nr_movies != len(data['movies'])
+
 def add_movie_to_json(file_name, new_movie):
     with open(file_name) as f:
         data = json.load(f)
@@ -94,41 +89,44 @@ def add_movie_to_json(file_name, new_movie):
         return False
     for movie in data['movies']:
         if new_movie['id'] == movie['id']:
-            print 'movie already added'
+            print movie['title'] + ' already added'
             return False
     data['movies'].append(new_movie)
     with open(file_name, 'w') as f:
         json.dump(data, f)
     return True
 
-def add_movie(folder, todo):
+def add_movie(folder, todo, todo_file = None):
     imdb_code = raw_input('enter imdb code: ')
     new_movie = get_json_movie(imdb_code.strip())
-    print new_movie
     if not add_movie_to_json(folder + 'movies.json', new_movie):
         return
 
+    title = new_movie['title']
     if not todo:
-        add_to_statistics(new_movie['title'], new_movie['rating'])
+        add_to_statistics(title, new_movie['rating'])
     print 'succesfully added "' + title + '"',
     if todo:
         print 'to the TODO list.'
     else:
         print 'to the WATCH list.'
-    if not todo and remove_from_todo_list(imdb_code.strip()):
+    if not todo and remove_movie_from_json(todo_file + 'movies.json', imdb_code.strip()):
         print 'succesfully removed "' + title + '" from the todo list'
 
 def main():
     if len(sys.argv) < 2:
         print 'not enough arguments'
 
+    watch_folder = ''
+    todo_folder = '../movies_todo/'
+
     if sys.argv[1] == '--generate':
-        generate('', False)
-        generate('../movies_todo/', True)
+        generate(watch_folder, False)
+        generate(todo_folder, True)
     if sys.argv[1] == '--add':
-        add_movie('', False)
+        add_movie(watch_folder, False, todo_folder)
     if sys.argv[1] == '--todo':
-        add_movie('../movies_todo/', True)
+        add_movie(todo_folder, True)
 
 if __name__ == '__main__':
     main()
