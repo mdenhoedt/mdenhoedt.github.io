@@ -3,6 +3,18 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['X2', 7.5]
+            ,['X2', 7.5]
+            ,['X2', 7.5]
+            ,['X2', 7.5]
+            ,['X2', 7.5]
+            ,['X2', 7.5]
+            ,['X2', 7.5]
+            ,['X2', 7.5]
+            ,['Killer Elite', 6.5]
+            ,['The Proposal', 6.7]
+            ,['Term Life', 5.4]
+            ,['Captain Phillips', 7.9]
             ,['Criminal (2016)', 6.3]
             ,['Man of Steel (2013)', 7.1]
             ,['A Hologram for the King (2016)', 6.1]
