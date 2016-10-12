@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['RED', 7.1]
             ,['I Am Wrath', 5.3]
             ,['Badge of Honor', 4.8]
             ,['X2', 7.5]
