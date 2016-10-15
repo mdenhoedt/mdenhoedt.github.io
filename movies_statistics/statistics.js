@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Batman v Superman: Dawn of Justice', 6.8]
             ,['RED 2', 6.7]
             ,['RED', 7.1]
             ,['I Am Wrath', 5.3]
