@@ -2,4 +2,8 @@
     <string name="app_name">My Movies</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="todo_fragment">TODO</string>
+    <string name="watched_fragment">watched</string>
+    <string name="stats_fragment">stats</string>
 </resources>
