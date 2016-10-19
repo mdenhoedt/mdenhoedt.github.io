@@ -10,7 +10,10 @@ def get_html_imdb(imdb_code):
 def get_info(html):
     soup = BeautifulSoup(html, 'html.parser')
     title = str(soup.find('h1', {'itemprop': 'name'}).text.strip()[:-7])
-    rating = str(soup.find('span', {'itemprop': 'ratingValue'}).text).strip()
+    try:
+        rating = str(soup.find('span', {'itemprop': 'ratingValue'}).text).strip()
+    except AttributeError:
+        rating = '-'
     year = int(soup.find('span', {'id': 'titleYear'}).find('a').text)
     return title, rating, year
 
