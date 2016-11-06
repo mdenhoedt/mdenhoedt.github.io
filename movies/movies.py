@@ -68,8 +68,11 @@ def generate(folder, todo):
             f.write('movies I have seen are labeled green.</p>\n')
         f.write(search_form)
         f.write('<p class="movies" id="movies-list">\n')
-        for movie in movies:
-            f.write(json_to_html(movie))
+        for i, movie in enumerate(movies):
+            if i >= len(movies) - 5:
+                f.write(json_to_html(movie, btn_type='success'))
+            else:
+                f.write(json_to_html(movie))
         f.write(end_html)
 
 def remove_movie_from_json(file_name, movie):
