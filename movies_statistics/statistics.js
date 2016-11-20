@@ -3,6 +3,9 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Where to Invade Next', 7.6]
+            ,['The Trust', 5.4]
+            ,['Finding Dory', 7.6]
             ,['Spider-Man 2', 7.3]
             ,['The Bucket List', 7.4]
             ,['Spider-Man', 7.3]
