@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['3:10 to Yuma', 7.7]
+            ,['Superbad', 7.6]
             ,['Hacksaw Ridge', 8.6]
             ,['Fantastic Beasts and Where to Find Them', 7.8]
             ,['Snowden', 7.4]
