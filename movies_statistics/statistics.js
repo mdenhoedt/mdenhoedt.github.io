@@ -3,6 +3,8 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['The Accountant', 7.5]
+            ,['The Quick and the Dead', 6.4]
             ,['Office Christmas Party', 6.0]
             ,['Collateral Beauty', 5.7]
             ,['War Dogs', 7.2]
