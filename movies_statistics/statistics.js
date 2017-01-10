@@ -3,6 +3,9 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Assassin's Creed', 6.5]
+            ,['Why Him?', 6.6]
+            ,['The Founder', 7.3]
             ,['Sully', 7.6]
             ,['Mr. Nobody', 7.9]
             ,['Wild', 7.1]
