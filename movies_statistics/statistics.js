@@ -3,6 +3,9 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Swiss Army Man', 7.1]
+            ,['Hell or High Water', 7.7]
+            ,['Bridget Jones's Baby', 6.8]
             ,['Assassin's Creed', 6.5]
             ,['Why Him?', 6.6]
             ,['The Founder', 7.3]
