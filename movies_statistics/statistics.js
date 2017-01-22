@@ -3,6 +3,9 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Brimstone', 7.5]
+            ,['xXx: Return of Xander Cage', 5.6]
+            ,['The Recruit', 6.6]
             ,['Swiss Army Man', 7.1]
             ,['Hell or High Water', 7.7]
             ,['Bridget Jones's Baby', 6.8]
