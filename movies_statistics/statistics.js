@@ -3,6 +3,12 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['Allegiant', 5.7]
+            ,['Hancock', 6.4]
+            ,['Frost/Nixon', 7.7]
+            ,['Live by Night', 6.6]
+            ,['Eight Below', 7.3]
+            ,['Road to Perdition', 7.7]
             ,['Brimstone', 7.5]
             ,['xXx: Return of Xander Cage', 5.6]
             ,['The Recruit', 6.6]
