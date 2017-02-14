@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['John Wick: Chapter 2', 8.5]
             ,['Pompeii', 5.6]
             ,['Inferno', 6.2]
             ,['Old Dogs', 5.4]
