@@ -1,4 +1,6 @@
 import urllib2, sys, cgi, json, re
+import numpy as np
+import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 
 imdb_url = 'http://www.imdb.com/title/'
@@ -25,16 +27,6 @@ def get_json_movie(imdb_code):
             'rating':rating,
             'year': year
             }
-
-def add_to_statistics(title, rating):
-    file_name = '../movies_statistics/statistics.js'
-    with open(file_name) as f:
-        contents = f.readlines()
-    line = "            ,['" + title + "', " + rating + "]\n"
-    contents.insert(5, line)
-    with open(file_name, 'w') as f:
-        output = "".join(contents)
-        f.write(output)
 
 def json_to_html(movie, btn_type='default'):
     html = '<a href="http://www.imdb.com/title/{0}" title="rating: {1}" class="btn btn-{4}">{2} ({3})</a>\n'
@@ -75,6 +67,42 @@ def generate(folder, todo):
                 f.write(json_to_html(movie))
         f.write(end_html)
 
+def compute_dict(lst):
+    output = {}
+    for e in lst:
+        if e not in output:
+            output[e] = 0
+        output[e] += 1
+    return output
+
+def generate_stats(folder):
+    with open(folder + 'movies.json') as f:
+        data = json.load(f)
+    ratings = [float(e['rating']) for e in data['movies']]
+
+    n, bins, patches = plt.hist(ratings, 20, facecolor='#5cb85c')
+    plt.xlabel('imdb score')
+    plt.ylabel('occurrences')
+    plt.savefig('../movies_statistics/plt_ratings.svg', bbox_inches='tight')
+    plt.clf()
+
+    years = [int(e['year']) for e in data['movies']]
+    freq_dict = compute_dict(years)
+    years = [e for e in freq_dict if freq_dict[e] > 5]
+    years.sort()
+    freqs = [freq_dict[e] for e in years]
+
+    fig, ax = plt.subplots()
+    ind = np.arange(len(years))
+    width = .9
+    rects = ax.bar(ind, freqs, width, color='#5cb85c')
+    ax.set_xticks(ind + width / 2.0)
+    ax.set_xticklabels(years, rotation='vertical')
+    ax.set_ylabel('ocurrences')
+    ax.set_title('removed years with 5 ocurrences or less')
+    plt.savefig('../movies_statistics/plt_years.svg', bbox_inches='tight')
+    plt.clf()
+
 def remove_movie_from_json(file_name, movie):
     with open(file_name) as f:
         data = json.load(f)
@@ -109,8 +137,6 @@ def add_movie(folder, todo, todo_file = None):
         return
 
     title = new_movie['title']
-    if not todo:
-        add_to_statistics(title, new_movie['rating'])
     print 'succesfully added "' + title + '"',
     if todo:
         print 'to the TODO list.'
@@ -129,6 +155,7 @@ def main():
     if sys.argv[1] == '--generate':
         generate(watch_folder, False)
         generate(todo_folder, True)
+        generate_stats(watch_folder)
     if sys.argv[1] == '--add':
         add_movie(watch_folder, False, todo_folder)
     if sys.argv[1] == '--todo':
