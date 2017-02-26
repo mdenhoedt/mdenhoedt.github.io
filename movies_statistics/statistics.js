@@ -3,6 +3,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
             ['Movie', 'Rating']
+            ,['The LEGO Batman Movie', 7.7]
             ,['Equals', 6.1]
             ,['Anthropoid', 7.2]
             ,['John Wick: Chapter 2', 8.5]
@@ -22,8 +23,8 @@ function drawChart() {
             ,['The Recruit', 6.6]
             ,['Swiss Army Man', 7.1]
             ,['Hell or High Water', 7.7]
-            ,['Bridget Jones's Baby', 6.8]
-            ,['Assassin's Creed', 6.5]
+            ,['Bridget Jones\'s Baby', 6.8]
+            ,['Assassin\'s Creed', 6.5]
             ,['Why Him?', 6.6]
             ,['The Founder', 7.3]
             ,['Sully', 7.6]
