@@ -21,3 +21,8 @@ p.movies {
 .blank {
     color: white;
 }
+
+.scaling {
+    max-width: 100%;
+    height: auto;
+}

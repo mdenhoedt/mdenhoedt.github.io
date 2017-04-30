@@ -1,9 +1,8 @@
 all:
-	cd movies; python generate.py
-	cd movies_todo; python generate.py
+	cd movies; python movies.py --generate
 
 add:
-	cd movies; python add_movie.py
+	cd movies; python movies.py --add
 
 todo:
-	cd movies_todo; python add_movie.py
+	cd movies; python movies.py --todo
