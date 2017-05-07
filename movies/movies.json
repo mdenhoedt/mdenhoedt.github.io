@@ -2855,7 +2855,7 @@
       "year": 2010, 
       "id": "tt1542344", 
       "title": "127 Hours"
-    },
+    }, 
     {
       "rating": "7.5", 
       "title": "The Edge of Seventeen", 
@@ -2933,6 +2933,18 @@
       "title": "Live Free or Die Hard", 
       "id": "tt0337978", 
       "year": 2007
+    }, 
+    {
+      "rating": "8.0", 
+      "title": "Dallas Buyers Club", 
+      "id": "tt0790636", 
+      "year": 2013
+    }, 
+    {
+      "rating": "6.9", 
+      "year": 2015, 
+      "id": "tt2006295", 
+      "title": "The 33"
     }
   ]
 }
