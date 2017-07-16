@@ -3035,6 +3035,42 @@
       "year": 2012, 
       "id": "tt1855199", 
       "title": "End of Watch"
+    }, 
+    {
+      "rating": "7.0", 
+      "title": "The Mummy", 
+      "id": "tt0120616", 
+      "year": 1999
+    }, 
+    {
+      "rating": "8.5", 
+      "year": 2006, 
+      "id": "tt0407887", 
+      "title": "The Departed"
+    }, 
+    {
+      "rating": "7.6", 
+      "title": "The Town", 
+      "id": "tt0840361", 
+      "year": 2010
+    }, 
+    {
+      "rating": "8.5", 
+      "year": 2012, 
+      "id": "tt1345836", 
+      "title": "The Dark Knight Rises"
+    }, 
+    {
+      "rating": "5.4", 
+      "title": "The Hollow Point", 
+      "id": "tt2918606", 
+      "year": 2016
+    }, 
+    {
+      "rating": "6.4", 
+      "year": 2017, 
+      "id": "tt3874544", 
+      "title": "The Boss Baby"
     }
   ]
 }
