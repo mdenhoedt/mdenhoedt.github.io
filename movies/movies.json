@@ -3107,6 +3107,18 @@
       "year": 2014, 
       "id": "tt2490326", 
       "title": "Cooties"
+    }, 
+    {
+      "rating": "6.5", 
+      "title": "Genius", 
+      "id": "tt1703957", 
+      "year": 2016
+    }, 
+    {
+      "rating": "6.0", 
+      "year": 2016, 
+      "id": "tt3793788", 
+      "title": "The Escort"
     }
   ]
 }
