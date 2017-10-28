@@ -1,6 +1,7 @@
 body {
     padding-top: 50px;
 }
+
 .starter-template {
     padding: 40px 15px;
 }
@@ -10,8 +11,11 @@ body {
 }
 
 p.movies {
-    line-height: 250%;
     margin-top: 20px;
+}
+
+p.movies > a.btn {
+    margin-bottom: .2rem
 }
 
 .left-button {
@@ -25,4 +29,8 @@ p.movies {
 .scaling {
     max-width: 100%;
     height: auto;
+}
+
+#search-form {
+    padding: 20px;
 }

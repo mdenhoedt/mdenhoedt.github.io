@@ -28,8 +28,8 @@ def get_json_movie(imdb_code):
             'year': year
             }
 
-def json_to_html(movie, btn_type='default'):
-    html = '<a href="http://www.imdb.com/title/{0}" title="rating: {1}" class="btn btn-{4}">{2} ({3})</a>\n'
+def json_to_html(movie, btn_type='outline-dark'):
+    html = '<a href="http://www.imdb.com/title/{0}" title="rating: {1}" class="btn btn-{4}" role="button">{2} ({3})</a>\n'
     if 'rating' in movie:
         rating = movie['rating']
     else:
