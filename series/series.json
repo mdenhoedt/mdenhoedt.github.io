@@ -1,0 +1,32 @@
+{
+    "series": [
+        {
+            "rating": 8.2,
+            "title": "Orange Is the New Black",
+            "id": "tt2372162",
+            "seasons": [
+                {
+                    "nr": 1,
+                    "year": 2013
+                },
+                {
+                    "nr": 2,
+                    "year": 2014
+                },
+                {
+                    "nr": 3,
+                    "year": 2015
+                },
+                {
+                    "nr": 4,
+                    "year": 2016
+                },
+                {
+                    "nr": 5,
+                    "year": 2017
+                }
+            ]
+        }
+    ]
+}
+

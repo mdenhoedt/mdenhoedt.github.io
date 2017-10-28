@@ -8,7 +8,7 @@
 <meta name="author" content="">
 <link rel="icon" href="../favicon.ico">
 
-<title>To-do Movies</title>
+<title>Series</title>
 
 <!-- Bootstrap core CSS -->
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,11 +16,12 @@
 <!-- Custom styles for this template -->
 <link href="../style.css" rel="stylesheet">
 
-<script src="movies.js"></script>
-
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-
-<body onload="set_up()">
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">mdenhoedt</a>
@@ -37,23 +38,39 @@
             <li class="nav-item">
                 <a class="nav-link" href="../">Home</a>
             </li>
-            <li class="nav-item dropdown active">
+            <li class="nav-item dropdown">
                 <a href="" class="nav-link dropdown-toggle" id="dropdown-movies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Movies <span class="caret"></span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown-movies">
                     <a class="dropdown-item" href="../movies">Movies List</a>
-                    <a class="dropdown-item" href="">To-do Movie List</a>
+                    <a class="dropdown-item" href="../movies_todo">To-do Movie List</a>
                     <a class="dropdown-item" href="../movies_statistics">Statistics</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../series/">Series</a>
+            <li class="nav-item active">
+                <a class="nav-link" href="">Series</a>
             </li>
         </ul>
     </div><!--/.nav-collapse -->
 </nav>
 
-
 <div class="container">
 
     <div class="starter-template">
-        <h1>To-do Movies</h1>
+        <h1>Series</h1>
+        <p class="lead">The 1 serie with a total of 5 seasons and 73 episodes I have seen are listed on this page.</p>
+        <div class="movies" id="series-list">
+            <a href="http://www.imdb.com/title/tt2372162" title="rating: 8.2" class="btn btn-outline-dark" role="alert">Orange is the New Black <br/> S1-S5 | 2013-2017</a>
+        </div>
+    </div>
+</div><!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../bootstrap/js/popper.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+
