@@ -394,6 +394,24 @@
       "title": "Atomic Blonde", 
       "id": "tt2406566", 
       "year": 2017
+    }, 
+    {
+      "rating": "8.3", 
+      "year": 2017, 
+      "id": "tt3501632", 
+      "title": "Thor: Ragnarok"
+    }, 
+    {
+      "rating": "5.8", 
+      "title": "Geostorm", 
+      "id": "tt1981128", 
+      "year": 2017
+    }, 
+    {
+      "rating": "6.5", 
+      "year": 2017, 
+      "id": "tt3348730", 
+      "title": "Jigsaw"
     }
   ]
 }
