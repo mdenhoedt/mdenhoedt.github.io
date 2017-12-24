@@ -3215,6 +3215,18 @@
       "year": 2005, 
       "id": "tt0369441", 
       "title": "Fun with Dick and Jane"
+    }, 
+    {
+      "rating": "6.7", 
+      "title": "Bright", 
+      "id": "tt5519340", 
+      "year": 2017
+    }, 
+    {
+      "rating": "6.2", 
+      "year": 2017, 
+      "id": "tt4703048", 
+      "title": "6 Days"
     }
   ]
 }
