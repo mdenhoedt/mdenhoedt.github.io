@@ -3305,6 +3305,18 @@
       "year": 2017, 
       "id": "tt4209788", 
       "title": "Molly's Game"
+    }, 
+    {
+      "rating": "7.1", 
+      "title": "Margin Call", 
+      "id": "tt1615147", 
+      "year": 2011
+    }, 
+    {
+      "rating": "6.3", 
+      "year": 2007, 
+      "id": "tt0432021", 
+      "title": "Resident Evil: Extinction"
     }
   ]
 }
