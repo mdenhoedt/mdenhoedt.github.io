@@ -112,7 +112,7 @@ def remove_movie_from_json(file_name, movie):
     nr_movies = len(data['movies'])
     data['movies'] = filter(lambda e: e['id'] != movie, data['movies'])
     with open(file_name, 'w') as f:
-        json.dump(data, f, indent=2)
+        json.dump(data, f, indent=2, sort_keys=True)
     return nr_movies != len(data['movies'])
 
 def add_movie_to_json(file_name, new_movie):
@@ -127,7 +127,7 @@ def add_movie_to_json(file_name, new_movie):
             return False
     data['movies'].append(new_movie)
     with open(file_name, 'w') as f:
-        json.dump(data, f, indent=2)
+        json.dump(data, f, indent=2, sort_keys=True)
     return True
 
 def add_movie(folder, todo, todo_file = None):
