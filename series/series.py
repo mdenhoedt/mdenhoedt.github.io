@@ -12,23 +12,22 @@ def get_html_imdb(imdb_code, season_nr=None):
         url = imdb_url + imdb_code
     else:
         url = imdb_url + imdb_code + '/episodes?season=' + str(season_nr)
-    return urllib2.urlopen().read().strip()
+    return urllib2.urlopen(url).read().strip()
 
 
 def get_serie_info(html):
     soup = BeautifulSoup(html, 'html.parser')
-    title = str(soup.find('h1', {'itemprop': 'name'}).text.strip()[:-7])
+    title = soup.find('h1', {'itemprop': 'name'}).text.strip()
     try:
         rating = str(soup.find('span', {'itemprop': 'ratingValue'}).text).strip()
     except AttributeError:
         rating = '-'
-    year = int(soup.find('span', {'id': 'titleYear'}).find('a').text)
-    return title, rating, year
+    return title, rating
 
 
 def get_json_serie(imdb_code):
     html = get_html_imdb(imdb_code)
-    title, rating, year = get_serie_info(html)
+    title, rating = get_serie_info(html)
     return {'id': imdb_code,
             'title': title,
             'rating':rating,
@@ -37,6 +36,7 @@ def get_json_serie(imdb_code):
 
 
 def get_season_info(html):
+    soup = BeautifulSoup(html, 'html.parser')
     year = int(soup.find('div', {'class': 'airdate'}).text.strip().split(' ')[-1])
     return year
 
@@ -44,7 +44,7 @@ def get_season_info(html):
 def get_json_season(imdb_code, season_nr):
     html = get_html_imdb(imdb_code, season_nr)
     year = get_season_info(html)
-    return {'nr': nr,
+    return {'nr': season_nr,
             'year': year
             }
 
