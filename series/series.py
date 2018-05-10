@@ -6,10 +6,16 @@ from bs4 import BeautifulSoup
 imdb_url = 'http://www.imdb.com/title/'
 nr_green = 5
 
-def get_html_imdb(imdb_code):
-    return urllib2.urlopen(imdb_url + imdb_code).read().strip()
 
-def get_info(html):
+def get_html_imdb(imdb_code, season_nr=None):
+    if season_nr == None:
+        url = imdb_url + imdb_code
+    else:
+        url = imdb_url + imdb_code + '/episodes?season=' + str(season_nr)
+    return urllib2.urlopen().read().strip()
+
+
+def get_serie_info(html):
     soup = BeautifulSoup(html, 'html.parser')
     title = str(soup.find('h1', {'itemprop': 'name'}).text.strip()[:-7])
     try:
@@ -19,147 +25,112 @@ def get_info(html):
     year = int(soup.find('span', {'id': 'titleYear'}).find('a').text)
     return title, rating, year
 
-def get_json_movie(imdb_code):
+
+def get_json_serie(imdb_code):
     html = get_html_imdb(imdb_code)
-    title, rating, year = get_info(html)
+    title, rating, year = get_serie_info(html)
     return {'id': imdb_code,
             'title': title,
             'rating':rating,
+            'seasons': []
+            }
+
+
+def get_season_info(html):
+    year = int(soup.find('div', {'class': 'airdate'}).text.strip().split(' ')[-1])
+    return year
+
+
+def get_json_season(imdb_code, season_nr):
+    html = get_html_imdb(imdb_code, season_nr)
+    year = get_season_info(html)
+    return {'nr': nr,
             'year': year
             }
 
-def json_to_html(movie, btn_type='default'):
-    html = '<a href="http://www.imdb.com/title/{0}" title="rating: {1}" class="btn btn-{4}">{2} ({3})</a>\n'
-    if 'rating' in movie:
-        rating = movie['rating']
+
+def json_to_html(serie, btn_type='default'):
+    html = '<a href="http://www.imdb.com/title/{0}" title="rating: {1}" class="btn btn-{4}">{2}</br>{3}</a>\n'
+    if 'rating' in serie:
+        rating = serie['rating']
     else:
         rating = '-'
-    return html.format(movie['id'], rating, movie['title'], movie['year'], btn_type)
+    seasons = serie['seasons']
+    if len(seasons) == 0:
+        raise Error('No seasons defined') 
+    if len(seasons) == 1:
+        extra_info = 'S{0} | {1}'.format(seasons[0]['nr'], seasons[0]['year'])
+    else:
+        extra_info = 'S{0}-S{1} | {2}-{3}'.format(seasons[0]['nr'], seasons[-1]['nr'], seasons[0]['year'], seasons[-1]['year'])
+    return html.format(serie['id'], rating, serie['title'], extra_info, btn_type)
+
 
 def generate(folder, todo):
     with open(folder + 'start.txt') as f:
         start_html = f.read()
-    with open(folder + 'movies.json') as f:
+    with open(folder + 'series.json') as f:
         data = json.load(f)
-        if 'movies' not in data:
+        if 'series' not in data:
             return
-        movies = data['movies']
+        series = data['series']
     with open('search_form.txt') as f:
         search_form = f.read()
     with open('end.txt') as f:
         end_html = f.read()
     with open(folder + 'index.html', 'w') as f:
         f.write(start_html)
-        f.write('<p class="lead">The ' + str(len(movies)) + ' ')
-        if todo:
-            f.write('movies I want to watch are listed on this page. The 5 most ')
-            f.write('recently added are marked green and the movies marked red are ')
-            f.write('the longest in this list.</p>\n')
-        else:
-            f.write('movies I have seen are listed on this page. The last 5 ')
-            f.write('movies I have seen are labeled green.</p>\n')
+        f.write('<p class="lead">The ' + str(len(series)) + ' ')
+        f.write('series I have seen are listed on this page. The last 5 ')
+        f.write('series I have seen are labeled green.</p>\n')
         f.write(search_form)
-        f.write('<p class="movies" id="movies-list">\n')
-        for i, movie in enumerate(movies):
-            if i >= len(movies) - 5:
-                f.write(json_to_html(movie, btn_type='success'))
+        f.write('<p class="series" id="series-list">\n')
+        for i, serie in enumerate(series):
+            if i >= len(series) - 5:
+                f.write(json_to_html(serie, btn_type='success'))
             else:
-                f.write(json_to_html(movie))
+                f.write(json_to_html(serie))
         f.write(end_html)
 
-def compute_dict(lst):
-    output = {}
-    for e in lst:
-        if e not in output:
-            output[e] = 0
-        output[e] += 1
-    return output
 
-def generate_stats(folder):
-    with open(folder + 'movies.json') as f:
-        data = json.load(f)
-    ratings = [float(e['rating']) for e in data['movies']]
-
-    n, bins, patches = plt.hist(ratings, 20, facecolor='#5cb85c')
-    plt.xlabel('imdb score')
-    plt.ylabel('occurrences')
-    plt.savefig('../movies_statistics/plt_ratings.svg', bbox_inches='tight')
-    plt.clf()
-
-    years = [int(e['year']) for e in data['movies']]
-    freq_dict = compute_dict(years)
-    years = [e for e in freq_dict if freq_dict[e] > 5]
-    years.sort()
-    freqs = [freq_dict[e] for e in years]
-
-    fig, ax = plt.subplots()
-    ind = np.arange(len(years))
-    width = .9
-    rects = ax.bar(ind, freqs, width, color='#5cb85c')
-    ax.set_xticks(ind + width / 2.0)
-    ax.set_xticklabels(years, rotation='vertical')
-    ax.set_ylabel('ocurrences')
-    ax.set_title('removed years with 5 ocurrences or less')
-    plt.savefig('../movies_statistics/plt_years.svg', bbox_inches='tight')
-    plt.clf()
-
-def remove_movie_from_json(file_name, movie):
+def add_serie_to_json(file_name, new_serie):
     with open(file_name) as f:
         data = json.load(f)
-    if 'movies' not in data:
+    if 'series' not in data:
         print 'invalid JSON file'
         return False
-    nr_movies = len(data['movies'])
-    data['movies'] = filter(lambda e: e['id'] != movie, data['movies'])
-    with open(file_name, 'w') as f:
-        json.dump(data, f, indent=2)
-    return nr_movies != len(data['movies'])
-
-def add_movie_to_json(file_name, new_movie):
-    with open(file_name) as f:
-        data = json.load(f)
-    if 'movies' not in data:
-        print 'invalid JSON file'
-        return False
-    for movie in data['movies']:
-        if new_movie['id'] == movie['id']:
-            print movie['title'] + ' already added'
+    for serie in data['series']:
+        if new_serie['id'] == serie['id']:
+            print serie['title'] + ' already added'
             return False
-    data['movies'].append(new_movie)
+    data['series'].append(new_serie)
     with open(file_name, 'w') as f:
-        json.dump(data, f, indent=2)
+        json.dump(data, f, indent=2, sort_keys=True)
     return True
 
-def add_movie(folder, todo, todo_file = None):
-    imdb_code = raw_input('enter imdb code: ')
-    new_movie = get_json_movie(imdb_code.strip())
-    if not add_movie_to_json(folder + 'movies.json', new_movie):
+
+def add_serie(folder):
+    imdb_code = raw_input('enter imdb code: ').strip()
+    new_serie = get_json_serie(imdb_code)
+    season_nr = int(raw_input('enter season number: ').strip())
+    season = get_json_season(imdb_code, season_nr)
+    new_serie['seasons'] = [season]
+    if not add_serie_to_json(folder + 'series.json', new_serie):
         return
 
-    title = new_movie['title']
-    print 'succesfully added "' + title + '"',
-    if todo:
-        print 'to the TODO list.'
-    else:
-        print 'to the WATCH list.'
-    if not todo and remove_movie_from_json(todo_file + 'movies.json', imdb_code.strip()):
-        print 'succesfully removed "' + title + '" from the todo list'
+    title = new_serie['title']
+    print 'succesfully added "' + title + '" to the WATCH list.'
+
 
 def main():
     if len(sys.argv) < 2:
         print 'not enough arguments'
 
     watch_folder = ''
-    todo_folder = '../movies_todo/'
 
     if sys.argv[1] == '--generate':
         generate(watch_folder, False)
-        generate(todo_folder, True)
-        generate_stats(watch_folder)
     if sys.argv[1] == '--add':
-        add_movie(watch_folder, False, todo_folder)
-    if sys.argv[1] == '--todo':
-        add_movie(todo_folder, True)
+        add_serie(watch_folder)
 
 if __name__ == '__main__':
     main()

@@ -57,21 +57,3 @@
 
     <div class="starter-template">
         <h1>Series</h1>
-<p class="lead">The 1 series I have seen are listed on this page. The last 5 series I have seen are labeled green.</p>
-<p class="series" id="series-list">
-<a href="http://www.imdb.com/title/tt2372162" title="rating: 8.2" class="btn btn-success">Orange Is the New Black</br>S1-S5 | 2013-2017</a>
-
-</p></div>
-
-</div><!-- /.container -->
-
-
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../bootstrap/js/popper.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
-
