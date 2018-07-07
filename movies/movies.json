@@ -5,7 +5,7 @@
       "rating": "7.0", 
       "title": "Coming to America", 
       "year": 1988
-    },
+    }, 
     {
       "id": "tt0434409", 
       "rating": 8.2, 
@@ -3533,6 +3533,24 @@
       "rating": "6.4", 
       "title": "Ocean's Eight", 
       "year": 2018
+    }, 
+    {
+      "id": "tt1790809", 
+      "rating": "6.6", 
+      "title": "Pirates of the Caribbean: Salazar's Revenge", 
+      "year": 2017
+    }, 
+    {
+      "id": "tt2250912", 
+      "rating": "7.5", 
+      "title": "Spider-Man: Homecoming", 
+      "year": 2017
+    }, 
+    {
+      "id": "tt4633690", 
+      "rating": "7.3", 
+      "title": "Shot Caller", 
+      "year": 2017
     }
   ]
 }
