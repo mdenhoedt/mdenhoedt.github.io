@@ -436,6 +436,30 @@
       "rating": "7.8", 
       "title": "Black Panther", 
       "year": 2018
+    }, 
+    {
+      "id": "tt3688342", 
+      "rating": "6.8", 
+      "title": "Zoo", 
+      "year": 2017
+    }, 
+    {
+      "id": "tt3892172", 
+      "rating": "7.7", 
+      "title": "Leave No Trace", 
+      "year": 2018
+    }, 
+    {
+      "id": "tt1478338", 
+      "rating": "6.8", 
+      "title": "Bridesmaids", 
+      "year": 2011
+    }, 
+    {
+      "id": "tt5270948", 
+      "rating": "6.6", 
+      "title": "Chappaquiddick", 
+      "year": 2017
     }
   ]
 }
