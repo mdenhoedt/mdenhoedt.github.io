@@ -3701,6 +3701,30 @@
       "rating": "7.7", 
       "title": "First Man", 
       "year": 2018
+    }, 
+    {
+      "id": "tt0430357", 
+      "rating": "6.0", 
+      "title": "Miami Vice", 
+      "year": 2006
+    }, 
+    {
+      "id": "tt1103153", 
+      "rating": "5.4", 
+      "title": "Killers", 
+      "year": 2010
+    }, 
+    {
+      "id": "tt6679794", 
+      "rating": "7.0", 
+      "title": "Outlaw King", 
+      "year": 2018
+    }, 
+    {
+      "id": "tt7104984", 
+      "rating": "6.4", 
+      "title": "Gun City", 
+      "year": 2018
     }
   ]
 }
