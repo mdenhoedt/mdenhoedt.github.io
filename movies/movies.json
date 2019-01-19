@@ -3725,6 +3725,66 @@
       "rating": "6.4", 
       "title": "Gun City", 
       "year": 2018
+    }, 
+    {
+      "id": "tt1592525", 
+      "rating": "6.1", 
+      "title": "Lockout", 
+      "year": 2012
+    }, 
+    {
+      "id": "tt3722614", 
+      "rating": "5.2", 
+      "title": "Revolt", 
+      "year": 2017
+    }, 
+    {
+      "id": "tt1645155", 
+      "rating": "6.1", 
+      "title": "Erased", 
+      "year": 2012
+    }, 
+    {
+      "id": "tt9495224", 
+      "rating": "7.5", 
+      "title": "Black Mirror: Bandersnatch", 
+      "year": 2018
+    }, 
+    {
+      "id": "tt6710826", 
+      "rating": "3.7", 
+      "title": "The Jurassic Games", 
+      "year": 2018
+    }, 
+    {
+      "id": "tt0117060", 
+      "rating": "7.1", 
+      "title": "Mission: Impossible", 
+      "year": 1996
+    }, 
+    {
+      "id": "tt5478478", 
+      "rating": "7.2", 
+      "title": "Hostiles", 
+      "year": 2017
+    }, 
+    {
+      "id": "tt4123430", 
+      "rating": "6.8", 
+      "title": "Fantastic Beasts: The Crimes of Grindelwald", 
+      "year": 2018
+    }, 
+    {
+      "id": "tt4986098", 
+      "rating": "4.8", 
+      "title": "The Titan", 
+      "year": 2018
+    }, 
+    {
+      "id": "tt4428728", 
+      "rating": "6.3", 
+      "title": "Braqueurs", 
+      "year": 2015
     }
   ]
 }
