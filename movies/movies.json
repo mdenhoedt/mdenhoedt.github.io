@@ -3785,6 +3785,36 @@
       "rating": "6.3", 
       "title": "Braqueurs", 
       "year": 2015
+    }, 
+    {
+      "id": "tt5316540", 
+      "rating": "5.6", 
+      "title": "Close", 
+      "year": 2019
+    }, 
+    {
+      "id": "tt9412098", 
+      "rating": "7.4", 
+      "title": "Fyre", 
+      "year": 2019
+    }, 
+    {
+      "id": "tt7280898", 
+      "rating": "6.8", 
+      "title": "22 July", 
+      "year": 2018
+    }, 
+    {
+      "id": "tt0443274", 
+      "rating": "6.6", 
+      "title": "Vantage Point", 
+      "year": 2008
+    }, 
+    {
+      "id": "tt3256226", 
+      "rating": "4.7", 
+      "title": "Io", 
+      "year": 2019
     }
   ]
 }
