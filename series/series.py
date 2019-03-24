@@ -1,4 +1,4 @@
-import urllib2, sys, cgi, json, re
+import urllib, sys, cgi, json, re
 import numpy as np
 import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
@@ -96,11 +96,11 @@ def add_serie_to_json(file_name, new_serie):
     with open(file_name) as f:
         data = json.load(f)
     if 'series' not in data:
-        print 'invalid JSON file'
+        print('invalid JSON file')
         return False
     for serie in data['series']:
         if new_serie['id'] == serie['id']:
-            print serie['title'] + ' already added'
+            print(serie['title'] + ' already added')
             return False
     data['series'].append(new_serie)
     with open(file_name, 'w') as f:
@@ -118,12 +118,12 @@ def add_serie(folder):
         return
 
     title = new_serie['title']
-    print 'succesfully added "' + title + '" to the WATCH list.'
+    print('succesfully added "' + title + '" to the WATCH list.')
 
 
 def main():
     if len(sys.argv) < 2:
-        print 'not enough arguments'
+        print('not enough arguments')
 
     watch_folder = ''
 

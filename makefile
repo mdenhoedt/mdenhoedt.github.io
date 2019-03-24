@@ -1,16 +1,16 @@
 all: movie_gen serie_gen
 
 movie_gen:
-	cd movies; python movies.py --generate
+	cd movies; python3 movies.py --generate
 
 movie_add:
-	cd movies; python movies.py --add
+	cd movies; python3 movies.py --add
 
 movie_todo:
-	cd movies; python movies.py --todo
+	cd movies; python3 movies.py --todo
 
 serie_gen:
-	cd series; python series.py --generate
+	cd series; python3 series.py --generate
 
 serie_add:
-	cd series; python series.py --add
+	cd series; python3 series.py --add

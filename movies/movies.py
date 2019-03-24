@@ -1,4 +1,4 @@
-import urllib2, sys, cgi, json, re
+import urllib, sys, cgi, json, re
 import numpy as np
 import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
@@ -11,7 +11,7 @@ def get_html_imdb(imdb_code):
 
 def get_info(html):
     soup = BeautifulSoup(html, 'html.parser')
-    title = str(soup.find('h1', {'class': ''}).text.strip()[:-7])
+    title = soup.find('h1', {'class': ''}).text.strip()[:-7].encode('utf-8')
     try:
         rating = str(soup.find('div', {'class': 'ratingValue'}).find('span').text).strip()
     except AttributeError:
@@ -39,7 +39,7 @@ def json_to_html(movie, btn_type='outline-dark'):
 def generate(folder, todo):
     with open(folder + 'start.txt') as f:
         start_html = f.read()
-    with open(folder + 'movies.json') as f:
+    with open(folder + 'movies.json', encoding='utf-8') as f:
         data = json.load(f)
         if 'movies' not in data:
             return
@@ -107,7 +107,7 @@ def remove_movie_from_json(file_name, movie):
     with open(file_name) as f:
         data = json.load(f)
     if 'movies' not in data:
-        print 'invalid JSON file'
+        print('invalid JSON file')
         return False
     nr_movies = len(data['movies'])
     data['movies'] = filter(lambda e: e['id'] != movie, data['movies'])
@@ -119,11 +119,11 @@ def add_movie_to_json(file_name, new_movie):
     with open(file_name) as f:
         data = json.load(f)
     if 'movies' not in data:
-        print 'invalid JSON file'
+        print('invalid JSON file')
         return False
     for movie in data['movies']:
         if new_movie['id'] == movie['id']:
-            print movie['title'] + ' already added'
+            print(movie['title'] + ' already added')
             return False
     data['movies'].append(new_movie)
     with open(file_name, 'w') as f:
@@ -137,17 +137,17 @@ def add_movie(folder, todo, todo_file = None):
         return
 
     title = new_movie['title']
-    print 'succesfully added "' + title + '"',
+    print('succesfully added "' + title + '"', end='')
     if todo:
-        print 'to the TODO list.'
+        print('to the TODO list.')
     else:
-        print 'to the WATCH list.'
+        print('to the WATCH list.')
     if not todo and remove_movie_from_json(todo_file + 'movies.json', imdb_code.strip()):
-        print 'succesfully removed "' + title + '" from the todo list'
+        print('succesfully removed "' + title + '" from the todo list')
 
 def main():
     if len(sys.argv) < 2:
-        print 'not enough arguments'
+        print('not enough arguments')
 
     watch_folder = ''
     todo_folder = '../movies_todo/'
