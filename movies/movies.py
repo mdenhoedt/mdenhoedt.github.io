@@ -1,4 +1,4 @@
-import urllib, sys, cgi, json, re
+import urllib3, sys, cgi, json, re
 import numpy as np
 import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
@@ -7,7 +7,8 @@ imdb_url = 'http://www.imdb.com/title/'
 nr_green = 5
 
 def get_html_imdb(imdb_code):
-    return urllib2.urlopen(imdb_url + imdb_code).read().strip()
+    http = urllib3.PoolManager()
+    return http.request('GET', imdb_url + imdb_code).data.strip()
 
 def get_info(html):
     soup = BeautifulSoup(html, 'html.parser')
@@ -126,12 +127,13 @@ def add_movie_to_json(file_name, new_movie):
             print(movie['title'] + ' already added')
             return False
     data['movies'].append(new_movie)
+    print(data)
     with open(file_name, 'w') as f:
         json.dump(data, f, indent=2, sort_keys=True)
     return True
 
 def add_movie(folder, todo, todo_file = None):
-    imdb_code = raw_input('enter imdb code: ')
+    imdb_code = input('enter imdb code: ')
     new_movie = get_json_movie(imdb_code.strip())
     if not add_movie_to_json(folder + 'movies.json', new_movie):
         return
