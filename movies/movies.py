@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
 
+import util.json_serialization as json_util
+
 imdb_url = 'http://www.imdb.com/title/'
 nr_green = 5
 
@@ -12,7 +14,7 @@ def get_html_imdb(imdb_code):
 
 def get_info(html):
     soup = BeautifulSoup(html, 'html.parser')
-    title = soup.find('h1', {'class': ''}).text.strip()[:-7].encode('utf-8')
+    title = soup.find('h1', {'class': ''}).text.strip()[:-7].encode('utf-8').decode('ascii')
     try:
         rating = str(soup.find('div', {'class': 'ratingValue'}).find('span').text).strip()
     except AttributeError:
@@ -40,11 +42,10 @@ def json_to_html(movie, btn_type='outline-dark'):
 def generate(folder, todo):
     with open(folder + 'start.txt') as f:
         start_html = f.read()
-    with open(folder + 'movies.json', encoding='utf-8') as f:
-        data = json.load(f)
-        if 'movies' not in data:
-            return
-        movies = data['movies']
+    data = json_util.load(folder + 'movies.json')
+    if 'movies' not in data:
+        return
+    movies = data['movies']
     with open('search_form.txt') as f:
         search_form = f.read()
     with open('end.txt') as f:
@@ -77,8 +78,7 @@ def compute_dict(lst):
     return output
 
 def generate_stats(folder):
-    with open(folder + 'movies.json') as f:
-        data = json.load(f)
+    data = json_util.load(folder + 'movies.json')
     ratings = [float(e['rating']) for e in data['movies']]
 
     n, bins, patches = plt.hist(ratings, 20, facecolor='#5cb85c')
@@ -105,20 +105,17 @@ def generate_stats(folder):
     plt.clf()
 
 def remove_movie_from_json(file_name, movie):
-    with open(file_name) as f:
-        data = json.load(f)
+    data = json_util.load(file_name)
     if 'movies' not in data:
         print('invalid JSON file')
         return False
     nr_movies = len(data['movies'])
-    data['movies'] = filter(lambda e: e['id'] != movie, data['movies'])
-    with open(file_name, 'w') as f:
-        json.dump(data, f, indent=2, sort_keys=True)
+    data['movies'] = list(filter(lambda e: e['id'] != movie, data['movies']))
+    json_util.dump(file_name, data)
     return nr_movies != len(data['movies'])
 
 def add_movie_to_json(file_name, new_movie):
-    with open(file_name) as f:
-        data = json.load(f)
+    data = json_util.load(file_name)
     if 'movies' not in data:
         print('invalid JSON file')
         return False
@@ -127,9 +124,7 @@ def add_movie_to_json(file_name, new_movie):
             print(movie['title'] + ' already added')
             return False
     data['movies'].append(new_movie)
-    print(data)
-    with open(file_name, 'w') as f:
-        json.dump(data, f, indent=2, sort_keys=True)
+    json_util.dump(file_name, data)
     return True
 
 def add_movie(folder, todo, todo_file = None):
