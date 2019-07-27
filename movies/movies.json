@@ -4001,6 +4001,84 @@
       "rating": "6.7",
       "title": "The Incredible Hulk",
       "year": 2008
+    },
+    {
+      "id": "tt4877122",
+      "rating": "3.2",
+      "title": "The Emoji Movie",
+      "year": 2017
+    },
+    {
+      "id": "tt0382992",
+      "rating": "5.0",
+      "title": "Stealth",
+      "year": 2005
+    },
+    {
+      "id": "tt3766354",
+      "rating": "6.7",
+      "title": "The Equalizer 2",
+      "year": 2018
+    },
+    {
+      "id": "tt1618434",
+      "rating": "6.0",
+      "title": "Murder Mystery",
+      "year": 2019
+    },
+    {
+      "id": "tt2101341",
+      "rating": "6.5",
+      "title": "Dead Man Down",
+      "year": 2013
+    },
+    {
+      "id": "tt5663752",
+      "rating": "6.2",
+      "title": "This Was Tomorrow: Tomorrowland Presents...",
+      "year": 2015
+    },
+    {
+      "id": "tt4463894",
+      "rating": "6.4",
+      "title": "Shaft",
+      "year": 2019
+    },
+    {
+      "id": "tt2499472",
+      "rating": "5.7",
+      "title": "Point Blank",
+      "year": 2019
+    },
+    {
+      "id": "tt5175450",
+      "rating": "6.4",
+      "title": "Mark Felt: The Man Who Brought Down the White House",
+      "year": 2017
+    },
+    {
+      "id": "tt9358204",
+      "rating": "7.1",
+      "title": "The Great Hack",
+      "year": 2019
+    },
+    {
+      "id": "tt4154756",
+      "rating": "8.5",
+      "title": "Avengers: Infinity War",
+      "year": 2018
+    },
+    {
+      "id": "tt4154796",
+      "rating": "8.7",
+      "title": "Avengers: Endgame",
+      "year": 2019
+    },
+    {
+      "id": "tt4781612",
+      "rating": "6.5",
+      "title": "Imperium",
+      "year": 2016
     }
   ]
 }
