@@ -4409,6 +4409,102 @@
       "rating": "6.7",
       "title": "Zombieland: Double Tap",
       "year": 2019
+    },
+    {
+      "id": "tt0102070",
+      "rating": "5.8",
+      "title": "Hudson Hawk",
+      "year": 1991
+    },
+    {
+      "id": "tt6723592",
+      "rating": "7.6",
+      "title": "Tenet",
+      "year": 2020
+    },
+    {
+      "id": "tt9207616",
+      "rating": "4.9",
+      "title": "The Courier",
+      "year": 2019
+    },
+    {
+      "id": "tt7550000",
+      "rating": "6.0",
+      "title": "Project Power",
+      "year": 2020
+    },
+    {
+      "id": "tt0290095",
+      "rating": "5.4",
+      "title": "The Tuxedo",
+      "year": 2002
+    },
+    {
+      "id": "tt1684233",
+      "rating": "6.1",
+      "title": "Welcome to the Punch",
+      "year": 2013
+    },
+    {
+      "id": "tt1433108",
+      "rating": "6.4",
+      "title": "Faster",
+      "year": 2010
+    },
+    {
+      "id": "tt1833116",
+      "rating": "6.6",
+      "title": "The Informer",
+      "year": 2019
+    },
+    {
+      "id": "tt3522806",
+      "rating": "5.7",
+      "title": "Mechanic: Resurrection",
+      "year": 2016
+    },
+    {
+      "id": "tt9252468",
+      "rating": "7.1",
+      "title": "Mosul",
+      "year": 2019
+    },
+    {
+      "id": "tt7959026",
+      "rating": "7.0",
+      "title": "The Mule",
+      "year": 2018
+    },
+    {
+      "id": "tt4630562",
+      "rating": "6.7",
+      "title": "Fast & Furious 8",
+      "year": 2017
+    },
+    {
+      "id": "tt1259528",
+      "rating": "7.0",
+      "title": "Den of Thieves",
+      "year": 2018
+    },
+    {
+      "id": "tt1320253",
+      "rating": "6.5",
+      "title": "The Expendables",
+      "year": 2010
+    },
+    {
+      "id": "tt10539608",
+      "rating": "5.6",
+      "title": "The Midnight Sky",
+      "year": 2020
+    },
+    {
+      "id": "tt1846589",
+      "rating": "6.6",
+      "title": "Hunter Killer",
+      "year": 2018
     }
   ]
 }
