@@ -14,12 +14,19 @@ def get_html_imdb(imdb_code):
 
 def get_info(html):
     soup = BeautifulSoup(html, 'html.parser')
-    title = soup.find('h1', {'class': ''}).text.strip()[:-7].encode('utf-8').decode('ascii')
+    h1_element = soup.find('h1', {'class': lambda e: e.startswith('TitleHeader__TitleText') if e else False})
+    print(h1_element.text.strip())
+    title = h1_element.text.strip().encode('utf-8').decode('ascii')
     try:
-        rating = str(soup.find('div', {'class': 'ratingValue'}).find('span').text).strip()
+        span_element = soup.find('span', {'class': lambda e: e.startswith('AggregateRatingButton__RatingScore') if e else False})
+        rating = str(span_element.text).strip()
     except AttributeError:
         rating = '-'
-    year = int(soup.find('span', {'id': 'titleYear'}).find('a').text)
+    
+    div_element = soup.find('div', {'class': lambda e: e.startswith('TitleBlock__TitleMetaDataContainer') if e else False})
+    a_element = div_element.find('a', {'href': lambda e: e.endswith('#releases') if e else False})
+    year = str(a_element.text).strip()
+
     return title, rating, year
 
 def get_json_movie(imdb_code):
@@ -134,7 +141,7 @@ def add_movie(folder, todo, todo_file = None):
         return
 
     title = new_movie['title']
-    print('succesfully added "' + title + '"', end='')
+    print(f'succesfully added \'{title}\' ', end='')
     if todo:
         print('to the TODO list.')
     else:
